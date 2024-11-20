@@ -73,27 +73,33 @@
     </nav>
 
     <!-- Main Content -->
-    <img class="hero-bg" src="assets/images/Background.png" alt="" />
-    <div class="container mt-5 hero-container">
-      <div class="row">
-        <div class="col-md-10">
-          <h1 class="display-4">
-            Leading the Global <br />
-            Evolution of Smart Construction
-          </h1>
-          <p class="lead">
-            At URVISA, we’re more than consultants—we’re pioneers shaping the
-            next generation of construction. Our expertise in BIM, GIS, 3D
-            scanning, and sustainability allows us to deliver projects that set
-            new benchmarks in efficiency, resilience, and environmental
-            responsibility.
-          </p>
-          <a href="" class="ylw-btn"
-            >Know more <i class="ph ph-caret-right"></i
-          ></a>
+    <div class="hero-section">
+        <img class="hero-bg" src="assets/images/Background.png" alt="">
+        <div class="hero-content">
+            <div class="container mt-5 hero-container">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h1 class="display-4">
+                      Leading the Global <br />
+                      Evolution of Smart Construction
+                    </h1>
+                    <p class="lead">
+                      At URVISA, we’re more than consultants—we’re pioneers shaping the
+                      next generation of construction. Our expertise in BIM, GIS, 3D
+                      scanning, and sustainability allows us to deliver projects that set
+                      new benchmarks in efficiency, resilience, and environmental
+                      responsibility.
+                    </p>
+                    <a href="" class="ylw-btn"
+                      >Know more <i class="ph ph-caret-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
         </div>
       </div>
-    </div>
+      
+    
     <!-- <div class="container my-5">
       <div class="row">
         <div class="col-md-6">
@@ -247,15 +253,31 @@
         const heroBg = document.querySelector(".hero-bg");
         const heroContainer = document.querySelector(".hero-container");
 
-        // Get the heights of the elements
-        const heroBgHeight = heroBg.offsetHeight;
-        const heroContainerHeight = heroContainer.offsetHeight;
+        // Define the media query for laptop and larger screens
+        const mediaQuery = window.matchMedia("(min-width: 1024px)"); // Adjust to your desired breakpoint
 
-        // Calculate the margin-bottom
-        const marginBottom = heroBgHeight - heroContainerHeight;
+        function updateMargin() {
+          if (mediaQuery.matches) {
+            // Get the heights of the elements
+            const heroBgHeight = heroBg.offsetHeight;
+            const heroContainerHeight = heroContainer.offsetHeight;
 
-        // Apply the calculated margin
-        heroContainer.style.marginBottom = `${marginBottom}px`;
+            // Calculate the margin-bottom
+            const marginBottom = heroBgHeight - heroContainerHeight;
+
+            // Apply the calculated margin
+            heroContainer.style.marginBottom = `${marginBottom}px`;
+          } else {
+            // Reset the margin for smaller screens
+            heroContainer.style.marginBottom = "0";
+          }
+        }
+
+        // Initial check
+        updateMargin();
+
+        // Recalculate on window resize
+        window.addEventListener("resize", updateMargin);
       });
     </script>
   </body>
