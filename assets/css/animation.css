@@ -1,0 +1,50 @@
+.ripple-animation, .play-btn:after, .play-btn:before {
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: ripple;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.1);
+      opacity: 0;
+    }
+  }
+  .movingX {
+    animation: movingX 8s linear infinite;
+  }
+  
+  @keyframes movingX {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .moving {
+    animation: moving 8s linear infinite;
+  }
+  
+  @keyframes moving {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
