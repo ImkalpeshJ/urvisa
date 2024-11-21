@@ -3,6 +3,7 @@
 :root { --theme-color: #E69515; }
 :root { --white-color: #fff; }
 :root { --icon-font-size: 24px; }
+:root { --section-space: 100px; }
 a{
   text-decoration: none;
   outline: 0;
@@ -158,7 +159,7 @@ body{
     height: 100%;
   }
   .lead.hat-desc{
-    width: 350px;
+    width: 300px;
   }
   .position-absolute.section-1-bg{
     top: unset;
@@ -401,7 +402,7 @@ li.touch p{
   opacity: 0.8;
 }
 [data-overlay=title]:before{
-  background-color: #15161C;
+  background-color: #15161c5c;
 }
 [data-overlay]:before{
   content: "";
@@ -570,4 +571,27 @@ li.touch p{
 }
 .process-card:hover:after{
   opacity: 1;
+}
+.space, .space-bottom{
+  padding-bottom: var(--section-space);
+}
+.space, .space-top{
+  padding-top: var(--section-space);
+}
+.client-area-1{
+  z-index: 1;
+  background-attachment: fixed;
+}
+.client-area-1:before{
+  z-index: -1;
+}
+[data-opacity="9"]:before{
+  opacity: 0.9;
+}
+.shape-mockup{
+  position: absolute;
+  z-index: -1;
+}
+.space-1{
+  padding: 50px 0;
 }
