@@ -1,286 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Page</title>
-    <link rel="apple-touch-icon" href="favicon.ico" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/animation.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#"
-          ><img src="assets/images/logo.svg" alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <div class="d-flex">
-                <div class="call-icon">
-                  <i class="ph-fill ph-phone"></i>
-                </div>
-                <a href="" class="nav-link d-flex flex-column">
-                  <span>Call us any time</span>
-                  <span class="mobile-num">+91 98765 98765</span>
-                </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Page</title>
+  <link rel="apple-touch-icon" href="favicon.ico" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animation.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/images/logo.svg" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <div class="d-flex">
+              <div class="call-icon">
+                <i class="ph-fill ph-phone"></i>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="hero-section">
-      <img class="hero-bg" src="assets/images/Background.png" alt="" />
-      <div class="hero-content">
-        <div class="container mt-5 hero-container">
-          <div class="row">
-            <div class="col-md-10">
-              <h1 class="display-4 hero-head">
-                Leading the Global <br />
-                Evolution of Smart Construction
-              </h1>
-              <p class="lead hero-desc">
-                At URVISA, we’re more than consultants—we’re pioneers shaping
-                the next generation of construction. Our expertise in BIM, GIS,
-                3D scanning, and sustainability allows us to deliver projects
-                that set new benchmarks in efficiency, resilience, and
-                environmental responsibility.
-              </p>
-              <a href="" class="ylw-btn"
-                >Know more <i class="ph ph-caret-right"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Section 1 -->
-    <div class="position-relative space-bottom">
-      <img
-        src="assets/images/section-1.svg"
-        alt=""
-        class="position-absolute section-1-bg"
-      />
-      <div class="container my-5">
-        <div class="row">
-          <div class="col-md-5">
-            <img
-              src="assets/images/section-1-fg.png"
-              class="img-fluid rounded fg-1 subcomponent"
-              data-animate="fadeInLeft"
-              alt="Placeholder"
-            />
-          </div>
-          <div class="col-md-7">
-            <p
-              class="lead hat-desc subcomponent about-us"
-              data-animate="fadeInUp"
-            >
-              <img src="assets/images/bullets.svg" alt="" />
-              <span>ABOUT US</span>
-            </p>
-            <h1
-              class="display-4 section-1-head subcomponent"
-              data-animate="fadeInUp"
-            >
-              Urvisa: Leading the Way in <br />
-              Construction Innovation
-            </h1>
-            <p class="lead section-desc subcomponent" data-animate="fadeInUp">
-              We see ourselves as more than just a tech solutions consultancy;
-              we are your trusted partners, dedicated to achieving results that
-              leave a meaningful impact. We bring together expert consultancy,
-              innovative technology, and a commitment to sustainability, making
-              sure that every project we undertake is designed to endure for the
-              long haul. As we navigate the complexities of urbanization,
-              climate change, and digital transformation, we create tailored
-              strategies that address the distinct challenges of each project.
-            </p>
-            <div class="row py-2 subcomponent" data-animate="fadeInUp">
-              <img src="assets/images/hat.svg" alt="" class="hat-icon" />
-              <span class="lead hat-desc p-0">Expertise Across Sectors</span>
-            </div>
-            <div class="row py-2 subcomponent" data-animate="fadeInUp">
-              <img src="assets/images/hat.svg" alt="" class="hat-icon" />
-              <span class="lead hat-desc p-0"
-                >Sustainable and Future-Ready Solutions</span
-              >
-            </div>
-            <div class="row py-2 subcomponent" data-animate="fadeInUp">
-              <img src="assets/images/hat.svg" alt="" class="hat-icon" />
-              <span class="lead hat-desc p-0">Technology-Driven Approach</span>
-            </div>
-            <div class="row py-2 subcomponent" data-animate="fadeInUp">
-              <img src="assets/images/hat.svg" alt="" class="hat-icon" />
-              <span class="lead hat-desc p-0">Customized Consultancy</span>
-            </div>
-            <button class="ylw-btn mt-3 subcomponent" data-animate="zoomIn">
-              EXPLORE OUR COMPANY <i class="ph-bold ph-arrow-up-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Section 2 -->
-
-    <!-- Section 3 -->
-    <section
-      class="process-area-1 space-top bg-attachment process-bg-half shape-mockup-wrap background-image"
-      data-overlay="title"
-      data-opacity="8"
-      style="background-image: url('assets/images/section-3.png')"
-    > 
-      <div class="container">
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-4 col-md-6">
-            <div class="title-area text-md-start text-center">
-              <span class="sub-title text-white hat-desc"
-                ><img
-                  src="assets/images/bullets-1.svg"
-                  alt="img"
-                />WHY US</span
-              >
-              <h2 class="sec-title text-white">Your Top Choice for <br>Construction Consultancy</h2>
-            </div>
-          </div>
-          <div class="col-md-auto">
-            <div class="sec-btn text-center">
-              <a
-                href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ"
-                class="popup-video play-btn-wrap"
-              >
-                Play Video
-                <span class="play-btn style2">
-                  <i class="ph-fill ph-play"></i>
-                </span>
+              <a href="" class="nav-link d-flex flex-column">
+                <span>Call us any time</span>
+                <span class="mobile-num">+91 98765 98765</span>
               </a>
             </div>
-          </div>
-        </div>
-        <div class="process-card-wrap">
-          <div class="row gy-30 gx-30">
-            <div class="col-xl-3 col-md-6">
-              <div class="process-card">
-                <div class="process-card-number">
-                  <span> 01 </span>
-                  STEP
-                </div>
-                <h4 class="process-card-title">
-                  Advanced <br>Tech Integration
-                </h4>
-                <p class="process-card-text">
-                  We leverage cutting-edge technologies such as Building Information Modeling (BIM), GIS, and Point Cloud Scanning to
-streamline project design.
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="process-card">
-                <div class="process-card-number">
-                  <span> 02 </span>
-                  STEP
-                </div>
-                <h4 class="process-card-title">Precision <br>Engineering</h4>
-                <p class="process-card-text">
-                  We apply advanced detailing techniques and precision engineering in every aspect of our work, from rebar and
-precast detailing to structural design.
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="process-card">
-                <div class="process-card-number">
-                  <span> 03 </span>
-                  STEP
-                </div>
-                <h4 class="process-card-title">Efficiency <br>at the Core</h4>
-                <p class="process-card-text">
-                  By optimizing workflows and minimizing delays, we consistently deliver projects on time and within budget, all
-while maximizing value at every turn.
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="process-card">
-                <div class="process-card-number">
-                  <span> 04 </span>
-                  STEP
-                </div>
-                <h4 class="process-card-title">
-                  Sector <br>Expertise
-                </h4>
-                <p class="process-card-text">
-                  Over 30+ years of combined experience across commercial, healthcare, hospitality, industrial, and more,
-providing tailored solutions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- Section 4 -->
-    <div class="space-bottom"></div>
-    <div class="client-area-1 text-center space-1 overflow-hidden shape-mockup-wrap background-image" data-overlay="title" data-opacity="9" style="background-image: url(&quot;assets/images/why-us.png&quot;);">
-      <div class="container">
-          <div class="title-area text-center m-0">
-              <h2 class="sec-title text-white m-0" style="white-space: pre-line;line-height: 55px;">Urvisa has the potential to reshape the consultancy
-                landscape, offering tech-driven and sustainable solutions
-                that add value to every stage of your construction journey.</h2>
+  <!-- Main Content -->
+  <div class="hero-section">
+    <img class="hero-bg" src="assets/images/Background.png" alt="" />
+    <div class="hero-content">
+      <div class="container mt-5 hero-container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1 class="display-4 hero-head">
+              Leading the Global <br />
+              Evolution of Smart Construction
+            </h1>
+            <p class="lead hero-desc">
+              At URVISA, we’re more than consultants—we’re pioneers shaping
+              the next generation of construction. Our expertise in BIM, GIS,
+              3D scanning, and sustainability allows us to deliver projects
+              that set new benchmarks in efficiency, resilience, and
+              environmental responsibility.
+            </p>
+            <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
           </div>
-          
+        </div>
       </div>
+    </div>
   </div>
-  <br>
-    <!-- Footer -->
-    <!-- <footer class="bg-dark text-light py-4">
+  <!-- Section 1 -->
+  <div class="position-relative space-bottom">
+    <img src="assets/images/section-1.svg" alt="" class="position-absolute section-1-bg" />
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-5">
+          <img src="assets/images/section-1-fg.png" class="img-fluid rounded fg-1 subcomponent"
+            data-animate="fadeInLeft" alt="Placeholder" />
+        </div>
+        <div class="col-md-7">
+          <p class="lead hat-desc subcomponent about-us mini-title" data-animate="fadeInUp">
+            <img src="assets/images/bullets.svg" alt="" />
+            <span>ABOUT US</span>
+          </p>
+          <h1 class="display-4 section-1-head subcomponent" data-animate="fadeInUp">
+            Urvisa: Leading the Way in <br />
+            Construction Innovation
+          </h1>
+          <p class="lead section-desc subcomponent" data-animate="fadeInUp">
+            We see ourselves as more than just a tech solutions consultancy;
+            we are your trusted partners, dedicated to achieving results that
+            leave a meaningful impact. We bring together expert consultancy,
+            innovative technology, and a commitment to sustainability, making
+            sure that every project we undertake is designed to endure for the
+            long haul. As we navigate the complexities of urbanization,
+            climate change, and digital transformation, we create tailored
+            strategies that address the distinct challenges of each project.
+          </p>
+          <div class="row py-2 subcomponent" data-animate="fadeInUp">
+            <img src="assets/images/hat.svg" alt="" class="hat-icon" />
+            <span class="lead hat-desc p-0">Expertise Across Sectors</span>
+          </div>
+          <div class="row py-2 subcomponent" data-animate="fadeInUp">
+            <img src="assets/images/hat.svg" alt="" class="hat-icon" />
+            <span class="lead hat-desc p-0">Sustainable and Future-Ready Solutions</span>
+          </div>
+          <div class="row py-2 subcomponent" data-animate="fadeInUp">
+            <img src="assets/images/hat.svg" alt="" class="hat-icon" />
+            <span class="lead hat-desc p-0">Technology-Driven Approach</span>
+          </div>
+          <div class="row py-2 subcomponent" data-animate="fadeInUp">
+            <img src="assets/images/hat.svg" alt="" class="hat-icon" />
+            <span class="lead hat-desc p-0">Customized Consultancy</span>
+          </div>
+          <button class="ylw-btn mt-3 subcomponent" data-animate="zoomIn">
+            EXPLORE OUR COMPANY <i class="ph-bold ph-arrow-up-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section 2 -->
+
+  <!-- Section 3 -->
+  <section class="process-area-1 space-top bg-attachment process-bg-half shape-mockup-wrap background-image"
+    data-overlay="title" data-opacity="8" style="background-image: url('assets/images/section-3.png')">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="title-area text-md-start text-center">
+            <span class="sub-title text-white hat-desc mini-title"><img src="assets/images/bullets-1.svg"
+                alt="img" />WHY US</span>
+            <h2 class="sec-title text-white">Your Top Choice for <br>Construction Consultancy</h2>
+          </div>
+        </div>
+        <div class="col-md-auto">
+          <div class="sec-btn text-center">
+            <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="popup-video play-btn-wrap">
+              Play Video
+              <span class="play-btn style2">
+                <i class="ph-fill ph-play"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="process-card-wrap">
+        <div class="row gy-30 gx-30">
+          <div class="col-xl-3 col-md-6">
+            <div class="process-card">
+              <div class="process-card-number">
+                <span> 01 </span>
+                STEP
+              </div>
+              <h4 class="process-card-title">
+                Advanced <br>Tech Integration
+              </h4>
+              <p class="process-card-text">
+                We leverage cutting-edge technologies such as Building Information Modeling (BIM), GIS, and Point Cloud
+                Scanning to
+                streamline project design.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="process-card">
+              <div class="process-card-number">
+                <span> 02 </span>
+                STEP
+              </div>
+              <h4 class="process-card-title">Precision <br>Engineering</h4>
+              <p class="process-card-text">
+                We apply advanced detailing techniques and precision engineering in every aspect of our work, from rebar
+                and
+                precast detailing to structural design.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="process-card">
+              <div class="process-card-number">
+                <span> 03 </span>
+                STEP
+              </div>
+              <h4 class="process-card-title">Efficiency <br>at the Core</h4>
+              <p class="process-card-text">
+                By optimizing workflows and minimizing delays, we consistently deliver projects on time and within
+                budget, all
+                while maximizing value at every turn.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="process-card">
+              <div class="process-card-number">
+                <span> 04 </span>
+                STEP
+              </div>
+              <h4 class="process-card-title">
+                Sector <br>Expertise
+              </h4>
+              <p class="process-card-text">
+                Over 30+ years of combined experience across commercial, healthcare, hospitality, industrial, and more,
+                providing tailored solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <div class="space-bottom"></div>
+  <div class="client-area-1 text-center space-1 overflow-hidden shape-mockup-wrap background-image" data-overlay="title" data-opacity="9" style="background-image: url(&quot;assets/images/why-us.png&quot;);">
+    <div class="container">
+        <div class="title-area text-center m-0">
+            <h2 class="sec-title text-white m-0" style="white-space: pre-line;line-height: 55px;">Urvisa has the potential to reshape the consultancy
+              landscape, offering tech-driven and sustainable solutions
+              that add value to every stage of your construction journey.</h2>
+        </div>
+        
+    </div>
+</div>
+
+  <!-- Section 5 -->
+  <div class="space" style="background-image: url(assets/images/section-5.png);background-size: contain;">
+    <div class="container">
+      <div class="col-md-12">
+        <div class="row">
+          <p class="lead hat-desc subcomponent about-us mini-title justify-content-center" data-animate="fadeInUp">
+            <img src="assets/images/bullets.svg" alt="" />
+            <span>OUR SERVICES</span>
+          </p>
+          <h1 class="display-4 section-1-head subcomponent text-center" data-animate="fadeInUp">
+            Our Services That We Provide
+          </h1>
+          <p class="lead section-desc subcomponent text-center" data-animate="fadeInUp">
+            We see ourselves as more than just a tech solutions consultancy; we are your trusted partners, dedicated to 
+            <br>achieving results that leave a meaningful impact. We bring together expert consultancy, innovative <br> technology, and a commitment to sustainability, making sure that every project we undertake is <br>
+designed to endure for the long haul. 
+          </p>
+        </div>
+      </div>
+      <div class="row gy-30 gx-30">
+        <!-- Card 1 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Building &amp; Industrial
+                    Audits</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Transform your infrastructure by identifying hidden inefficiencies through
+                comprehensive audits, ensuring your buildings and industrial sites meet the
+                highest standards of safety, compliance, and sustainability.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Enhanced Operational Efficiency</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Improved Safety and Compliance</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Prolonged Asset Lifespan</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Sustainability and Resource Optimization</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Point Cloud: 3D
+                  Mapping</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Achieve detailed as-built documentation through advanced laser scanning and photogrammetry, ensuring accuracy and completeness for better decision-making and faster project execution.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Improved Design and Planning</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Accelerated Project Planning</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Improved Risk Management</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Seamless Integration with BIM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Rebar & Precast
+                  Detailing</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Streamline construction processes by providing clear and detailed fabrication drawings that minimize errors, improve coordination, and speed up project execution.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Increased Precision</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Faster Project Delivery</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Cost Savings</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Enhanced Durability and Safety</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Cost Management</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Mitigate financial risks with expert cost forecasting and cost control measures that address potential cost overruns, keeping your project within
+                budget throughout its lifecycle.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Better Financial Control</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Cost Efficiency</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Enhanced Budget Transparency</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Risk Mitigation</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Design Services</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Unlock your property's full potential with our comprehensive design services, blending architectural innovation, structural integrity, and MEPF engineering. Our unique approach—study, design, execute—ensures added value and maximized returns.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Optimized Space Utilization</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Increased Property Value</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Cost Savings</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Sustainability and Longevity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Design & Execution
+                  Management</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Ensure End-to-End Consistency in project outcomes by leveraging our integrated approach, which keeps all elements—from design conception to execution—on track and in alignment with client specifications, industry
+                standards, and regulatory compliance.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Reduced Rework and Errors</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Streamlined Project Delivery</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Cost Control</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>High-Quality Outcomes</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <!-- <footer class="bg-dark text-light py-4">
         <div class="container text-center">
             <p class="mb-0">&copy; 2024 MyWebsite. All Rights Reserved.</p>
             <ul class="list-inline mt-2">
@@ -296,201 +601,193 @@ providing tailored solutions.
             </ul>
         </div>
     </footer> -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-infos">
-              <div class="footer-info">
-                <a href="/" class="logo">
-                  <img
-                    src="assets/images/logo-trans.svg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-infos">
+            <div class="footer-info">
+              <a href="/" class="logo">
+                <img src="assets/images/logo-trans.svg" alt="" class="img-fluid" />
+              </a>
+              <p>
+                At URVISA, we’re more than consultants—we’re pioneers shaping
+                the next generation of construction. Our expertise in BIM,
+                GIS, 3D scanning, and sustainability allows us to deliver
+                projects that set new benchmarks in efficiency, resilience,
+                and environmental responsibility.
+              </p>
+              <p>Copyright © URVISA 2024 All Rights Reserved.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <ul>
+              <h3>Get in Touch</h3>
+              <li class="touch">
+                <i class="bi bi-geo-alt"></i>
                 <p>
-                  At URVISA, we’re more than consultants—we’re pioneers shaping
-                  the next generation of construction. Our expertise in BIM,
-                  GIS, 3D scanning, and sustainability allows us to deliver
-                  projects that set new benchmarks in efficiency, resilience,
-                  and environmental responsibility.
+                  107-109, 1st Floor, R Square,<br />
+                  Near Mai Mangeshkar Hospital, <br />
+                  Warje, Pune- 411058 (India)
                 </p>
-                <p>Copyright © URVISA 2024 All Rights Reserved.</p>
+              </li>
+              <li class="touch">
+                <a href="mailto:vbc1724@gmail.com" target="_blank"><i class="bi bi-envelope"></i>
+                  &nbsp;vbc1724@gmail.com</a>
+              </li>
+              <li class="touch">
+                <a href="tel:7798077240"><i class="bi bi-telephone"></i>&nbsp; +91 77980 77240</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <ul>
+              <h3>Service</h3>
+              <li>
+                <a href="/jobs">Jobs</a>
+              </li>
+              <li>
+                <a href="#solution" id="footerSolutionLink">Solutions</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links new-footer">
+            <ul>
+              <h3>Company</h3>
+              <li>
+                <a href="/aboutus">About Us</a>
+              </li>
+              <li>
+                <a href="/contactus">Contact Us</a>
+              </li>
+              <li>
+                <a href="/privacypolicy" target="_blank">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/termsandcondition" target="_blank">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="/jobs/shenzyn">Careers</a>
+              </li>
+              <li>
+                <a href="<%= Blogs %>" target="_blank">Blogs</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <ul>
+              <h3>You can find us at</h3>
+              <div class="social-links mt-3">
+                <a href="<%= facebook %>" target="_blank" class="twitter">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="<%= Instagram %>" target="_blank" class="linkedin">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="<%= Twitter %>" target="_blank" class="linkedin">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="<%= Linkedin %>" target="_blank" class="linkedin">
+                  <i class="bi bi-linkedin"></i>
+                </a>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 footer-links">
-              <ul>
-                <h3>Get in Touch</h3>
-                <li class="touch">
-                  <i class="bi bi-geo-alt"></i>
-                  <p>
-                    107-109, 1st Floor, R Square,<br />
-                    Near Mai Mangeshkar Hospital, <br />
-                    Warje, Pune- 411058 (India)
-                  </p>
-                </li>
-                <li class="touch">
-                  <a href="mailto:vbc1724@gmail.com" target="_blank"
-                    ><i class="bi bi-envelope"></i> &nbsp;vbc1724@gmail.com</a
-                  >
-                </li>
-                <li class="touch">
-                  <a href="tel:7798077240"
-                    ><i class="bi bi-telephone"></i>&nbsp; +91 77980 77240</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 footer-links">
-              <ul>
-                <h3>Service</h3>
-                <li>
-                  <a href="/jobs">Jobs</a>
-                </li>
-                <li>
-                  <a href="#solution" id="footerSolutionLink">Solutions</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 footer-links new-footer">
-              <ul>
-                <h3>Company</h3>
-                <li>
-                  <a href="/aboutus">About Us</a>
-                </li>
-                <li>
-                  <a href="/contactus">Contact Us</a>
-                </li>
-                <li>
-                  <a href="/privacypolicy" target="_blank">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="/termsandcondition" target="_blank"
-                    >Terms & Conditions</a
-                  >
-                </li>
-                <li>
-                  <a href="/jobs/shenzyn">Careers</a>
-                </li>
-                <li>
-                  <a href="<%= Blogs %>" target="_blank">Blogs</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 footer-links">
-              <ul>
-                <h3>You can find us at</h3>
-                <div class="social-links mt-3">
-                  <a href="<%= facebook %>" target="_blank" class="twitter">
-                    <i class="bi bi-facebook"></i>
-                  </a>
-                  <a href="<%= Instagram %>" target="_blank" class="linkedin">
-                    <i class="bi bi-instagram"></i>
-                  </a>
-                  <a href="<%= Twitter %>" target="_blank" class="linkedin">
-                    <i class="bi bi-twitter-x"></i>
-                  </a>
-                  <a href="<%= Linkedin %>" target="_blank" class="linkedin">
-                    <i class="bi bi-linkedin"></i>
-                  </a>
-                </div>
-              </ul>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const heroBg = document.querySelector(".hero-bg");
-        const heroContainer = document.querySelector(".hero-container");
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heroBg = document.querySelector(".hero-bg");
+      const heroContainer = document.querySelector(".hero-container");
 
-        // Define the media query for laptop and larger screens
-        const mediaQuery = window.matchMedia("(min-width: 1024px)"); // Adjust to your desired breakpoint
+      // Define the media query for laptop and larger screens
+      const mediaQuery = window.matchMedia("(min-width: 1024px)"); // Adjust to your desired breakpoint
 
-        function updateMargin() {
-          if (mediaQuery.matches) {
-            // Get the heights of the elements
-            const heroBgHeight = heroBg.offsetHeight;
-            const heroContainerHeight = heroContainer.offsetHeight;
+      function updateMargin() {
+        if (mediaQuery.matches) {
+          // Get the heights of the elements
+          const heroBgHeight = heroBg.offsetHeight;
+          const heroContainerHeight = heroContainer.offsetHeight;
 
-            // Calculate the margin-bottom
-            const marginBottom = heroBgHeight - heroContainerHeight;
+          // Calculate the margin-bottom
+          const marginBottom = heroBgHeight - heroContainerHeight;
 
-            // Apply the calculated margin
-            heroContainer.style.marginBottom = `${marginBottom}px`;
-          } else {
-            // Reset the margin for smaller screens
-            heroContainer.style.marginBottom = "0";
-          }
+          // Apply the calculated margin
+          heroContainer.style.marginBottom = `${marginBottom}px`;
+        } else {
+          // Reset the margin for smaller screens
+          heroContainer.style.marginBottom = "0";
         }
-
-        // Initial check
-        updateMargin();
-
-        // Recalculate on window resize
-        window.addEventListener("resize", updateMargin);
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script>
-      // Helper function to check if an element is in the viewport
-      const isInViewport = (el) => {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.bottom >= 0
-        );
-      };
-
-      // Animate elements on scroll
-      const animateOnScroll = () => {
-        const elements = document.querySelectorAll(".subcomponent");
-        elements.forEach((el) => {
-          if (isInViewport(el) && !el.classList.contains("animated")) {
-            el.classList.add("animated"); // Prevent re-animation
-            const animationType = el.dataset.animate;
-
-            // Define animation based on data-animate attribute
-            if (animationType === "fadeInUp") {
-              anime({
-                targets: el,
-                translateY: [50, 0],
-                opacity: [0, 1],
-                duration: 100,
-                easing: "easeOutQuad",
-              });
-            } else if (animationType === "fadeInLeft") {
-              anime({
-                targets: el,
-                translateX: [-50, 0],
-                opacity: [0, 1],
-                duration: 100,
-                easing: "easeOutQuad",
-              });
-            } else if (animationType === "zoomIn") {
-              anime({
-                targets: el,
-                scale: [0.8, 1],
-                opacity: [0, 1],
-                duration: 100,
-                easing: "easeOutQuad",
-              });
-            }
-          }
-        });
-      };
-
-      // Attach scroll event listener
-      document.addEventListener("scroll", animateOnScroll);
+      }
 
       // Initial check
-      animateOnScroll();
-    </script>
-  </body>
+      updateMargin();
+
+      // Recalculate on window resize
+      window.addEventListener("resize", updateMargin);
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    // Helper function to check if an element is in the viewport
+    const isInViewport = (el) => {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+    };
+
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll(".subcomponent");
+      elements.forEach((el) => {
+        if (isInViewport(el) && !el.classList.contains("animated")) {
+          el.classList.add("animated"); // Prevent re-animation
+          const animationType = el.dataset.animate;
+
+          // Define animation based on data-animate attribute
+          if (animationType === "fadeInUp") {
+            anime({
+              targets: el,
+              translateY: [50, 0],
+              opacity: [0, 1],
+              duration: 100,
+              easing: "easeOutQuad",
+            });
+          } else if (animationType === "fadeInLeft") {
+            anime({
+              targets: el,
+              translateX: [-50, 0],
+              opacity: [0, 1],
+              duration: 100,
+              easing: "easeOutQuad",
+            });
+          } else if (animationType === "zoomIn") {
+            anime({
+              targets: el,
+              scale: [0.8, 1],
+              opacity: [0, 1],
+              duration: 100,
+              easing: "easeOutQuad",
+            });
+          }
+        }
+      });
+    };
+
+    // Attach scroll event listener
+    document.addEventListener("scroll", animateOnScroll);
+
+    // Initial check
+    animateOnScroll();
+  </script>
+</body>
+
 </html>
