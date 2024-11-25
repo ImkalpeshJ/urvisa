@@ -120,6 +120,39 @@ body{
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  cursor:none;
+}
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
+.cursor-dot{
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+.cursor-outline{
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+}
+.cursor-dot,
+.cursor-outline{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1000000000;
+  pointer-events: none;
 }
 .sticky{
   position: sticky;
@@ -1259,4 +1292,21 @@ li.touch p{
 
 .portfolio-card.style2:hover .portfolio-card-thumb img {
   transform: scale(1.1);
+}
+.social-icons{
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  flex-direction: column;
+}
+a.social-pill{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

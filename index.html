@@ -39,6 +39,42 @@
 </head>
 
 <body>
+  <div class="cursor-trail">
+    <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  </div>
+  <!-- <div class="cursor-outline" data-cursor-outline></div> -->
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
     <div class="container">
@@ -82,7 +118,14 @@
       </div>
     </div>
   </nav>
-
+  <div class="social-icons">
+    <a class="social-pill whatsapp fs-1 text-white" style="background: #25D366;cursor: pointer;">
+      <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+    <a class="social-pill call fs-1 text-white" style="background: #E69515;cursor: pointer;">
+      <i class="ph-fill ph-phone"></i>
+    </a>
+  </div>
   <!-- Main Content -->
   <div class="hero-section">
     <img class="hero-bg" src="assets/images/Background.png" alt="" />
@@ -958,6 +1001,65 @@ designed to endure for the long haul.
     // Initial check
     animateOnScroll();
   </script>
+  
+  <script>
+    const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#0A0A0A",
+  "#0A0A0A",
+  "#0A0A0A",
+  "#0A0A0A",
+  
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+  </script>
+  
 </body>
 
 </html>
