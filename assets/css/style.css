@@ -585,13 +585,13 @@ li.touch p{
 .process-card .process-card-title{
   font-size: 22px;
   font-weight: 600;
-  margin-top: 35px;
   margin-bottom: 15px;
 }
 .process-card .process-card-text{
   font-size: 14px;
   font-weight: 400;
   margin-bottom: -0.5em;
+  color: #8e8e8e;
 }
 .process-card:after{
   content: "";
@@ -605,8 +605,8 @@ li.touch p{
 .process-card:hover{
   box-shadow: 0px 4px 18.4px rgba(234, 85, 1, 0.2);
 }
-.process-card:hover .process-card-number span{
-  background: var(--theme-color);
+.process-card:hover .process-card-title{
+  color: var(--theme-color);
 }
 .process-card:hover:after{
   opacity: 1;
