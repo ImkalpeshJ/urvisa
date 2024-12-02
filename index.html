@@ -19,6 +19,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
+
+    <!-- Flickity -->
+     <!-- Flickity CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
+
+<!-- Flickity JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+
     <!-- Icons css -->
   <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -131,45 +139,108 @@
     </a>
   </div>
   <!-- Main Content -->
-  <div class="hero-section">
-    <img class="hero-bg" src="assets/images/Background.png" alt="" />
-    <div class="hero-content">
-      <div class="container mt-5 hero-container">
-        <div class="row">
-          <div class="col-md-10">
-            <h1 class="display-4 hero-head">
-              Leading the Global <br />
-              Evolution of Smart Construction
-            </h1>
-            
-            <script>
-              gsap.registerPlugin(TextPlugin);
-            
-              gsap.fromTo(".hero-head", 
-                { opacity: 0, text: { value: "" } }, 
-                { 
-                  text: { value: "Leading the Global <br /> Evolution of Smart Construction" },
-                  duration: 5,
-                  ease: "power2.inOut",
-                  opacity: 1 
-                }
-              );
-            </script>
-            <p class="lead hero-desc">
-              At URVISA, we’re more than consultants—we’re pioneers shaping
-              the next generation of construction. Our expertise in BIM, GIS,
-              3D scanning, and sustainability allows us to deliver projects
-              that set new benchmarks in efficiency, resilience, and
-              environmental responsibility.
-            </p>
-            <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+  
+  <div class="hero-slider" data-carousel>
+    <div class="carousel-cell" style="background-image:url(assets/images/bg-1.png);">
+      <div class="overlay"></div>
+      <div class="inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="display-4 hero-head text-black ani1">
+                Leading the Global <br />
+                Evolution of Smart Construction
+              </h1>
+              <p class="lead hero-desc text-black">
+                At URVISA, we’re more than consultants—we’re pioneers shaping
+                the next generation of construction. Our expertise in BIM, GIS,
+                3D scanning, and sustainability allows us to deliver projects
+                that set new benchmarks in efficiency, resilience, and
+                environmental responsibility.
+              </p>
+              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+            </div>
           </div>
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="carousel-cell" style="background-image:url(assets/images/bg-2.png);">
+      <div class="overlay"></div>
+      <div class="inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="display-4 hero-head text-black ani2">
+                Redefining the Boundaries of <br> What’s Possible in Construction
+              </h1>
+              <p class="lead hero-desc text-black">
+                Leveraging next-gen technologies such as BIM, GIS to advanced 3D scanning, alongside expert consultancy, we set new benchmarks in the construction industry, delivering optimized, scalable, and sustainable solutions for every project.
+              </p>
+              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell" style="background-image:url(assets/images/bg-3.png);">
+      <div class="overlay"></div>
+      <div class="inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="display-4 hero-head ani3" style="font-weight: 500;">
+                The Best <span style="font-weight: 800;">Tech Solutions</span> <br> <span style="font-weight: 800;">Consultancy</span> in Construction
+              </h1>
+              <p class="lead hero-desc">
+                At URVISA, we’re more than consultants—we’re pioneers shaping
+                the next generation of construction. Our expertise in BIM, GIS,
+                3D scanning, and sustainability allows us to deliver projects
+                that set new benchmarks in efficiency, resilience, and
+                environmental responsibility.
+              </p>
+              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
+  <script>
+    var options = {
+      accessibility: true,
+      prevNextButtons: false,
+      pageDots: true,
+      setGallerySize: false,
+      autoPlay: 5000, // Auto play every 3 seconds (3000ms)
+      arrowShape: {
+        x0: 10,
+        x1: 60,
+        y1: 50,
+        x2: 60,
+        y2: 45,
+        x3: 15
+      }
+    };
+  
+    var carousel = document.querySelector('[data-carousel]');
+    var slides = document.getElementsByClassName('carousel-cell');
+    var flkty = new Flickity(carousel, options);
+  
+    flkty.on('scroll', function () {
+      flkty.slides.forEach(function (slide, i) {
+        var image = slides[i];
+        var x = (slide.target + flkty.x) * -1 / 3;
+        image.style.backgroundPosition = x + 'px';
+      });
+    });
+  </script>
+  
   <!-- Section 1 -->
-  <div class="position-relative space-bottom">
+  <div class="position-relative space">
     <img src="assets/images/section-1.svg" alt="" class="position-absolute section-1-bg" />
     <div class="container my-5">
       <div class="row">
@@ -334,7 +405,7 @@ designed to endure for the long haul.
             <div class="service-card_content">
               <div class="d-flex align-items-center service-card-title">
                 <div class="service-card_icon">
-                  <img src="assets/images/bmi.svg" alt="img">
+                  <img src="assets/images/icons/i1.svg" alt="img">
                 </div>
                 <h4 class="service-card_title"><a href="">Building &amp; Industrial
                     Audits</a></h4>
@@ -390,6 +461,58 @@ designed to endure for the long haul.
                 <div class="service-card_icon">
                   <img src="assets/images/bmi.svg" alt="img">
                 </div>
+                <h4 class="service-card_title"><a href="">BIM: Building
+                  Information Modeling</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Enhance design accuracy with BIM’s intelligent modeling, which provides detailed simulations to predict and mitigate potential issues before construction begins, minimizing costly delays.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Enhanced Collaboration</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Lifecycle Management</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Precision in Planning</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Sustainable Construction</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/icons/i3.svg" alt="img">
+                </div>
                 <h4 class="service-card_title"><a href="">Point Cloud: 3D
                   Mapping</a></h4>
               </div>
@@ -433,14 +556,14 @@ designed to endure for the long haul.
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
+        <!-- Card 4 -->
         <div class="col-xl-4 col-md-6">
           <div class="service-card">
 
             <div class="service-card_content">
               <div class="d-flex align-items-center service-card-title">
                 <div class="service-card_icon">
-                  <img src="assets/images/bmi.svg" alt="img">
+                  <img src="assets/images/icons/i4.svg" alt="img">
                 </div>
                 <h4 class="service-card_title"><a href="">Rebar & Precast
                   Detailing</a></h4>
@@ -485,14 +608,14 @@ designed to endure for the long haul.
             </div>
           </div>
         </div>
-        <!-- Card 4 -->
+        <!-- Card 5 -->
         <div class="col-xl-4 col-md-6">
           <div class="service-card">
 
             <div class="service-card_content">
               <div class="d-flex align-items-center service-card-title">
                 <div class="service-card_icon">
-                  <img src="assets/images/bmi.svg" alt="img">
+                  <img src="assets/images/icons/i5.svg" alt="img">
                 </div>
                 <h4 class="service-card_title"><a href="">Cost Management</a></h4>
               </div>
@@ -537,19 +660,19 @@ designed to endure for the long haul.
             </div>
           </div>
         </div>
-        <!-- Card 5 -->
+        <!-- Card 6 -->
         <div class="col-xl-4 col-md-6">
           <div class="service-card">
 
             <div class="service-card_content">
               <div class="d-flex align-items-center service-card-title">
                 <div class="service-card_icon">
-                  <img src="assets/images/bmi.svg" alt="img">
+                  <img src="assets/images/icons/i6.svg" alt="img">
                 </div>
                 <h4 class="service-card_title"><a href="">Design Services</a></h4>
               </div>
               <div class="service-container">
-                <p class="service-card_text">Unlock your property's full potential with our comprehensive design services, blending architectural innovation, structural integrity, and MEPF engineering. Our unique approach—study, design, execute—ensures added value and maximized returns.</p>
+                <p class="service-card_text">Unlock your property's potential with our design services, combining creative ideas, strong structures, and MEPF systems. Our simple process—study, design, build—adds value and boosts returns.</p>
               <p class="service-card-add-text">
                 Here’s what you have to gain:
               </p>
@@ -588,21 +711,20 @@ designed to endure for the long haul.
             </div>
           </div>
         </div>
-        <!-- Card 6 -->
+        <!-- Card 7 -->
         <div class="col-xl-4 col-md-6">
           <div class="service-card">
 
             <div class="service-card_content">
               <div class="d-flex align-items-center service-card-title">
                 <div class="service-card_icon">
-                  <img src="assets/images/bmi.svg" alt="img">
+                  <img src="assets/images/icons/i7.svg" alt="img">
                 </div>
                 <h4 class="service-card_title"><a href="">Design & Execution
                   Management</a></h4>
               </div>
               <div class="service-container">
-                <p class="service-card_text">Ensure End-to-End Consistency in project outcomes by leveraging our integrated approach, which keeps all elements—from design conception to execution—on track and in alignment with client specifications, industry
-                standards, and regulatory compliance.</p>
+                <p class="service-card_text">Ensure consistent project outcomes with our comprehensive and integrated approach, keeping everything—from design to execution—aligned with client requirements, industry standards, and regulations.</p>
               <p class="service-card-add-text">
                 Here’s what you have to gain:
               </p>
@@ -641,8 +763,108 @@ designed to endure for the long haul.
             </div>
           </div>
         </div>
-        
-        
+        <!-- Card 8 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/bmi.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Design Services</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Unlock your property's potential with our design services, combining creative ideas, strong structures, and MEPF systems. Our simple process—study, design, build—adds value and boosts returns.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Optimized Space Utilization</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Increased Property Value</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Cost Savings</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Sustainability and Longevity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-card_content">
+              <div class="d-flex align-items-center service-card-title">
+                <div class="service-card_icon">
+                  <img src="assets/images/icons/i9.svg" alt="img">
+                </div>
+                <h4 class="service-card_title"><a href="">Training</a></h4>
+              </div>
+              <div class="service-container">
+                <p class="service-card_text">Ensure consistent project outcomes with our comprehensive and integrated approach, keeping everything—from design to execution—aligned with client requirements, industry standards, and regulations.</p>
+              <p class="service-card-add-text">
+                Here’s what you have to gain:
+              </p>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Reduced Rework and Errors</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Streamlined Project Delivery</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>Cost Control</span>
+                  </div>
+                </div>
+                <div class="row align-items-center mb-1">
+                  <div class="mini-bullet">
+                    <img src="assets/images/setting-hat.svg" alt="">
+                    <span>High-Quality Outcomes</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-btn"><i class="ph-bold ph-arrow-up-right"></i></div>
+                <a href="" class="ylw-btn">Explore Service <i class="ph-bold ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -898,8 +1120,10 @@ designed to endure for the long haul.
         </div>
         
     </div>
-</div>
+  </div>
 
+  <!-- Section 10 -->
+  
   <!-- Footer start -->
   
   <footer id="footer">
@@ -1025,38 +1249,6 @@ designed to endure for the long haul.
   </script>  
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const heroBg = document.querySelector(".hero-bg");
-      const heroContainer = document.querySelector(".hero-container");
-
-      // Define the media query for laptop and larger screens
-      const mediaQuery = window.matchMedia("(min-width: 1024px)"); // Adjust to your desired breakpoint
-
-      function updateMargin() {
-        if (mediaQuery.matches) {
-          // Get the heights of the elements
-          const heroBgHeight = heroBg.offsetHeight;
-          const heroContainerHeight = heroContainer.offsetHeight;
-
-          // Calculate the margin-bottom
-          const marginBottom = heroBgHeight - heroContainerHeight;
-
-          // Apply the calculated margin
-          heroContainer.style.marginBottom = `${marginBottom}px`;
-        } else {
-          // Reset the margin for smaller screens
-          heroContainer.style.marginBottom = "0";
-        }
-      }
-
-      // Initial check
-      updateMargin();
-
-      // Recalculate on window resize
-      window.addEventListener("resize", updateMargin);
-    });
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script>
     // Helper function to check if an element is in the viewport
@@ -1119,18 +1311,18 @@ designed to endure for the long haul.
 const circles = document.querySelectorAll(".circle");
 
 const colors = [
-  "#000000",
-  "#000000",
-  "#000000",
-  "#000000",
-  "#000000",
-  "#000000",
-  "#000000",
-  "#000000",
-  "#0A0A0A",
-  "#0A0A0A",
-  "#0A0A0A",
-  "#0A0A0A",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
+  "#3a3a3a",
   
 ];
 

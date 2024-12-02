@@ -180,15 +180,74 @@ body{
 }
 
 .hero-bg {
-  width: 100%; /* Ensure it covers the full width */
-  
+  width: 100%;
   position: absolute;
   left: 0;
   z-index: -1;
-
-  /* Ensure the image covers the container */
   object-fit: cover;
-  object-position: center; /* Default position for larger screens */
+  object-position: center; 
+}
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparentize(#0E1D33, 0.2), transparentize(#0E1D33, 0.8));
+}
+
+.hero-slider {
+  width: 100%;
+  height: 88vh;
+  overflow: hidden;
+
+  .carousel-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .inner {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+    .arrow {
+      fill: white;
+    }
+  }
+
+  .flickity-page-dots {
+    bottom: 30px;
+    .dot {
+      width: 30px;
+      height: 4px;
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.5);
+      border: 0 solid white;
+      border-radius: 0;
+      &.is-selected {
+        background: var(--theme-color);
+        border: 0 solid var(--theme-color);
+      }
+    }
+  }
 }
 
 /* Responsive adjustments */
@@ -444,7 +503,7 @@ li.touch p{
   background-color: #15161c5c;
 }
 [data-overlay=title1]:before{
-  background-color: #000000cb;
+  background-color: #000000;
 }
 [data-overlay]:before{
   content: "";
@@ -812,7 +871,6 @@ li.touch p{
 }
 
 .service-card_text {
-  min-height: 150px; /* Set a minimum height to align all paragraphs */
   margin-bottom: 1rem; /* Space out the paragraph from the heading */
 }
 
