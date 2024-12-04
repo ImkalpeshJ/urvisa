@@ -41,8 +41,8 @@
   <!-- Local JS -->
   <script src="assets/js/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
+  <!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
@@ -86,6 +86,16 @@
   <div class="circle"></div>
   <div class="circle"></div>
   </div>
+  <div id="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+  document.getElementById('loader-wrapper').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+});
+
+  </script>
   <!-- <div class="cursor-outline" data-cursor-outline></div> -->
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
@@ -262,6 +272,45 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+  // Register the ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+const logos = document.querySelectorAll('.logo-img');
+
+// Define animation properties for each logo
+logos.forEach((logo, index) => {
+  const animationProps = [
+    { y: 50, x: 0 }, // 1st logo: Bottom to top
+    { x: -50, y: 0 }, // 2nd logo: Left to right
+    { y: -50, x: 0 }, // 3rd logo: Top to bottom
+    { x: 50, y: 0 }, // 4th logo: Right to left
+    { y: 50, x: 0 }, // 5th logo: Bottom to top
+  ];
+
+  // Apply animation
+  gsap.fromTo(
+    logo,
+    {
+      opacity: 0,
+      ...animationProps[index % animationProps.length], // Initial position
+    },
+    {
+      opacity: 1,
+      x: 0,
+      y: 0, // Move to original position
+      duration: 2,
+      ease: "power2.out",
+      delay: index * 0.5, // Stagger animation for each logo
+    }
+  );
+});
+
+
+
+
+</script>
   <!-- Section 2 -->
   <div class="position-relative space">
     <img src="assets/images/section-1.svg" alt="" class="position-absolute section-1-bg" />
@@ -421,6 +470,7 @@ designed to endure for the long haul.
           </p>
         </div>
       </div>
+      
       <div class="row gy-30 gx-30">
         <!-- Card 1 -->
         <div class="col-xl-4 col-md-6">
