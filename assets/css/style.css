@@ -1360,6 +1360,7 @@ li.touch p{
   bottom: 0px;
   right: 20px;
   flex-direction: column;
+  z-index: 998;
 }
 a.social-pill{
   width: 60px;
@@ -1370,6 +1371,11 @@ a.social-pill{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  
+}
+a.social-pill img{
+  width: 60px;
+  height: 60px;
 }
 
 /*------------------- 4.00. Testimonial  -------------------*/
@@ -1926,4 +1932,90 @@ input[type="number"]::-webkit-inner-spin-button,
     transform: translate(0, -1em) rotate(-225deg)
   }
 }
-      
+.wcu-card-wrap {
+  max-width: 364px;
+  text-align: start;
+  margin: 0 42px;
+  position: relative;
+  z-index: 2;
+  /* Medium Large devices */
+}
+.wcu-card-wrap.left-align {
+  text-align: end;
+}
+.wcu-card-wrap.left-align .wcu-card {
+  flex-direction: row-reverse;
+}
+@media (max-width: 1399px) {
+  .wcu-card-wrap {
+    margin: 0;
+  }
+}
+
+.wcu-card {
+  display: inline-flex;
+  gap: 14px;
+}
+.wcu-card:not(:last-child) {
+  margin-bottom: 55px;
+}
+.wcu-card-icon {
+  flex: none;
+}
+.wcu-card-icon img {
+  transition: 0.4s;
+  width: 40px;
+}
+.wcu-card .wcu-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: -0.2em;
+  white-space: nowrap;
+}
+.wcu-card .wcu-card-text {
+  margin-bottom: -0.5em;
+  font-size: 14px;
+}
+.wcu-card:hover .wcu-card-icon img {
+  transform: rotateY(180deg);
+}
+
+/* Large devices */
+@media (max-width: 1199px) {
+  .wcu-card-wrap {
+    max-width: none;
+  }
+  .wcu-card-wrap.left-align {
+    text-align: start;
+  }
+  .wcu-card-wrap.left-align .wcu-card {
+    flex-direction: row;
+  }
+  .col-xl-4 .wcu-thumb1-1 img{
+    max-width: 45%;
+    margin-top: 50px;
+  }
+}
+/* Medium devices */
+@media (max-width: 991px) {
+  .wcu-card-wrap.left-align {
+    text-align: start;
+  }
+  .wcu-card .wcu-card-text {
+    font-size: 14px;
+  }
+}
+/* Small devices */
+@media (max-width: 767px) {
+  .wcu-card:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .wcu-card{
+    padding: 0 30px;
+  }
+}
+.wcu-thumb1-1 img{
+  max-width: 100%;
+  height: auto;
+}
