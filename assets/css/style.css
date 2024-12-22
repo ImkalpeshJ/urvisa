@@ -4,6 +4,10 @@
 :root { --white-color: #fff; }
 :root { --icon-font-size: 24px; }
 :root { --section-space: 100px;--title-color:#000; }
+html {
+  scroll-behavior: smooth;
+}
+
 a{
   text-decoration: none;
   outline: 0;
@@ -424,11 +428,16 @@ body{
 #footer{
   font-size: 14px;
   box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
-  background: #000000;
-  color: #fff;
+  background: url('/assets/images/footer-bg.png');
+  color: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
   .footer-top{
       padding: 60px 0 30px 0;
   }
+}
+.footer-top{
+  border-bottom: 1px solid #000;
 }
 #footer .footer-top .footer-links ul li{
   padding: 6px 0;
@@ -441,7 +450,7 @@ body{
   font-size: 16px;
 }
 #footer .footer-top .footer-links ul a{
-  color: #ffff;
+  color: #000;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -453,7 +462,7 @@ body{
   margin-bottom: 0.5rem;
 }
 li.touch p{
-  color: white;
+  color: #000;
   float: right;
   margin-left: 8px;
 }
@@ -466,7 +475,7 @@ li.touch p{
 }
 #footer .footer-top .footer-links ul i{
   padding-right: 2px;
-  color: #ffff;
+  color: #000;
   font-size: 26px;
   line-height: 1;
 }
@@ -1371,6 +1380,7 @@ a.social-pill{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: #E69515;
   
 }
 a.social-pill img{
@@ -1968,7 +1978,7 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 .wcu-card .wcu-card-title {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 8px;
   margin-top: -0.2em;
   white-space: nowrap;
@@ -2018,4 +2028,100 @@ input[type="number"]::-webkit-inner-spin-button,
 .wcu-thumb1-1 img{
   max-width: 100%;
   height: auto;
+}
+.numbers{
+  font-size: 70px;
+  font-weight: 600;
+}
+.numbers, .number-desc{
+  color: #fff;
+}
+.logo-img svg{
+  position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: #000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100%);
+}
+.slider-container {
+  max-height: 600px; /* Adjust slider height */
+  width: 100%; /* Full width */
+  margin: 20px auto; /* Center the slider */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #E69515;
+  color: #282828;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent;
+  transform: translateX(-50%);
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #E69515;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+  bottom: 117%;
+  left: -80%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-pill:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.social-pill .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent;
+  transform: translateX(-50%);
 }
