@@ -170,6 +170,9 @@ body{
 .nav-link{
   color: #8E8E8E;
 }
+.nav-link.active{
+  color: var(--theme-color) !important;
+}
 .call-icon{
   margin: 10px 5px;
   padding: 10px;
@@ -651,11 +654,12 @@ li.touch p{
   font-size: 30px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.12);
+  margin-bottom: 15px;
 }
 .process-card .process-card-number span{
   display: inline-block;
   background: #000;
-  width: 42px;
+  width: 48px;
   height: 48px;
   line-height: 48px;
   color: var(--white-color);
@@ -685,6 +689,10 @@ li.touch p{
 }
 .process-card:hover{
   box-shadow: 0px 4px 18.4px rgba(234, 85, 1, 0.2);
+  
+}
+.process-card:hover .process-card-number span{
+  background-color: var(--theme-color) !important;
 }
 .process-card:hover .process-card-title{
   color: var(--theme-color);
@@ -2234,5 +2242,11 @@ input[type="number"]::-webkit-inner-spin-button,
     flex-wrap: wrap;
   }
 }
-
+.process-card .process-card-number span img{
+  height: 40px;
+  padding: 6px;
+}
+.wcu-card-icon.wcu-image img{
+  width: 65px;
+}
 /* About us css ends here */
