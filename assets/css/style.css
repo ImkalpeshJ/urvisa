@@ -302,22 +302,39 @@ body{
   line-height: 1.777;
 }
 /* For tablets (medium screens) */
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .hero-desc {
     font-size: 16px;
     margin: 25px 0px 15px 0px;
     line-height: 1.6;
+    padding: 0 52px !important;
   }
 }
 
 /* For mobile devices (small screens) */
 @media (max-width: 576px) {
+  .hero-head{
+    text-align: start;
+  }
   .hero-desc {
     font-size: 14px;
     margin: 20px 0px 10px 0px;
     line-height: 1.5;
+    text-align: start;
+  }
+  .ylw-btn.mob-btn{
+    float: left;
   }
 }
+@media (max-width: 768px) {
+  .hero-desc {
+    font-size: 14px;
+    margin: 20px 0px 10px 0px;
+    line-height: 1.5;
+    padding: 0 !important;
+  }
+}
+
 .display-4{
   font-size: calc(12px + 2.7vw);
 }
@@ -2250,3 +2267,21 @@ input[type="number"]::-webkit-inner-spin-button,
   width: 65px;
 }
 /* About us css ends here */
+
+
+/* contact us css start here */
+.hidden {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}

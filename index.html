@@ -168,7 +168,7 @@
                 that set new benchmarks in efficiency, resilience, and
                 environmental responsibility.
               </p>
-              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+              <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
           </div>
 
@@ -192,7 +192,7 @@
                 that set new benchmarks in efficiency, resilience, and
                 environmental responsibility.
               </p>
-              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+              <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
           </div>
 
@@ -211,7 +211,7 @@
               <p class="lead hero-desc text-black" style="padding: 0 212px;">
                 Leveraging next-gen technologies such as BIM, GIS to advanced 3D scanning, alongside expert consultancy, we set new benchmarks in the construction industry, delivering optimized, scalable, and sustainable solutions for every project.
               </p>
-              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+              <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
           </div>
 
@@ -230,7 +230,7 @@
               <p class="lead hero-desc" style="padding: 0 212px;">
                 At Urvisa, our end-to-end tech solutions consultancy guides every aspect of your construction project. From initial design to final execution, we provide integrated, tech-powered strategies that ensure optimal outcomes. Whether it's project management, BIM, or cost management, our approach is customized to meet your exact needs.
               </p>
-              <a href="" class="ylw-btn">Know more <i class="ph ph-caret-right"></i></a>
+              <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
           </div>
 
@@ -1904,39 +1904,81 @@ Innovating Every Project
 
   <!-- Section 9 -->
   
-  <div class="client-area-1 text-center space-1 overflow-hidden shape-mockup-wrap background-image" data-overlay="title1" data-opacity="9" style="background-image: url(&quot;assets/images/banner.png&quot;);">
+  <div class="client-area-1 text-center space-1 overflow-hidden shape-mockup-wrap background-image" data-overlay="title1" data-opacity="9" style="background-image: url('assets/images/banner.png');">
     <div class="container py-4">
         <div class="row align-items-start justify-content-between title-area text-center m-0">
-          <div class="col-md-6">
-            <h2 class="sec-title text-white m-0" style="text-align: left;margin-top: 70px !important;">Contact Us</h2>
-          </div>
-            
-          <div class="col-md-3 p-0">
-            <div class="row m-1">
-              <input class="contact-us-input" type="text" placeholder="Your Name">
+            <div class="col-md-6">
+                <h2 class="sec-title text-white m-0" style="text-align: left; margin-top: 70px !important;">Contact Us</h2>
             </div>
-            <div class="row m-1">
-              <input class="contact-us-input" type="number" min="1000000000" max="9999999999" placeholder="Phone Number">
-            </div>
-            <div class="row m-1" style="margin-bottom: 24px !important;">
-              <input class="contact-us-input" type="email" placeholder="Email">
-            </div>
-            <div class="row m-1 web-btn">
-              <a class="ylw-btn" href="">Send Message <i class="ph-bold ph-arrow-up-right"></i></a>
-            </div>
-          </div>
-          <div class="col-md-3 p-0">
-            <div class="row m-1">
-              <textarea class="contact-us-textarea" name="" id="" placeholder="Your Message" style="margin-bottom: 16px;"></textarea>
-            </div>
-            <div class="row m-1 mob-btn">
-              <a class="ylw-btn" href="">Send Message <i class="ph-bold ph-arrow-up-right"></i></a>
-            </div>
-          </div>
+
+            <form id="contactForm" class="col-md-6 p-0">
+                <div class="row m-1">
+                    <input class="contact-us-input" type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="row m-1">
+                    <input class="contact-us-input" type="number" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="row m-1">
+                    <input class="contact-us-input" type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="row m-1">
+                    <textarea class="contact-us-textarea" id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="row m-1">
+                    <button type="submit" class="ylw-btn" data-bs-toggle="modal" data-bs-target="#responseModal">Send Message <i class="ph-bold ph-arrow-up-right"></i></button>
+                </div>
+            </form>
         </div>
-        
     </div>
+</div>
+
+<!-- Popup -->
+<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="responseModalLabel">Message Submitted</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Your query has been submitted. We will get back to you shortly.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
   </div>
+</div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phone, email, message }),
+    });
+
+    if (response.ok) {
+        document.getElementById('popup').classList.remove('hidden');
+    } else {
+        alert('Failed to submit your query. Please try again.');
+    }
+});
+
+function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
+}
+
+</script>
 
   <!-- Section 10 -->
   
