@@ -278,6 +278,7 @@ body{
   .about-us{
     margin-top: 35px;
   }
+  
 }
 
 
@@ -308,6 +309,9 @@ body{
     margin: 25px 0px 15px 0px;
     line-height: 1.6;
     padding: 0 52px !important;
+  }
+  .hero-aboutus{
+    padding-bottom: 15%;
   }
 }
 
@@ -440,10 +444,18 @@ body{
   line-height: 1.777; /* Matches hero-desc */
 }
 /* For tablets (medium screens) */
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .hat-desc {
     font-size: 16px; /* Matches hero-desc */
     line-height: 1.6; /* Matches hero-desc */
+  }
+  .hat-desc-1{
+    font-weight: 400;
+  }
+  .hat-desc-1 {
+    font-size: 16px; /* Matches hero-desc */
+    line-height: 1.6; /* Matches hero-desc */
+    width: 360px;
   }
 }
 
@@ -452,6 +464,18 @@ body{
   .hat-desc {
     font-size: 14px; /* Matches hero-desc */
     line-height: 1.5; /* Matches hero-desc */
+  }
+  .hat-desc-1{
+    font-weight: 400;
+  }
+  .hat-desc-1 {
+    font-size: 16px; /* Matches hero-desc */
+    line-height: 1.6; /* Matches hero-desc */
+    width: 261px;
+  }
+  .section-1-bg.about-us{
+    right: 0 ;
+    left: unset !important;
   }
 }
 
@@ -542,7 +566,7 @@ li.touch p{
   background-color: #15161c5c;
 }
 [data-overlay=title1]:before{
-  background-color: #000000;
+  background-color: #000000c4;
 }
 [data-overlay]:before{
   content: "";
