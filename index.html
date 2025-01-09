@@ -56,41 +56,8 @@
 </head>
 
 <body>
-  <div class="cursor-trail">
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  </div>
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
   <div id="loader-wrapper">
     <div class="loader"></div>
   </div>
@@ -117,13 +84,13 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="/ourservices.html">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="/ourprojects.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/urvisa/aboutus.html">About Us</a>
+            <a class="nav-link" href="/aboutus.html">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
@@ -910,7 +877,7 @@ logos.forEach((logo, index) => {
           </h1>
           <p class="lead section-desc subcomponent text-center" data-animate="fadeInUp">
             We see ourselves as more than just a tech solutions consultancy; we are your trusted partners, dedicated to 
-            <br>achieving results that leave a meaningful impact. We bring together expert consultancy, innovative <br> technology, and a commitment to sustainability, making sure that every project we undertake is <br>
+            <br class="mob-br">achieving results that leave a meaningful impact. We bring together expert consultancy, innovative <br class="mob-br"> technology, and a commitment to sustainability, making sure that every project we undertake is <br class="mob-br">
 designed to endure for the long haul. 
           </p>
         </div>
@@ -2225,61 +2192,46 @@ function closePopup() {
   </script>
   
   <script>
-    const coords = { x: 0, y: 0 };
-const circles = document.querySelectorAll(".circle");
+    const cursorDot = document.querySelector("[data-cursor-dot]");
+    const cursorOutline = document.querySelector("[data-cursor-outline]");
 
-const colors = [
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  "#3a3a3a",
-  
-];
+    window.addEventListener("mousemove", function(e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
 
-circles.forEach(function (circle, index) {
-  circle.x = 0;
-  circle.y = 0;
-  circle.style.backgroundColor = colors[index % colors.length];
-});
+      cursorOutline.animate(
+        {
+          left: `${posX}px`,
+          top: `${posY}px`
+        },
+        { duration: 500, fill: "forwards" }
+      );
+    });
+    document.querySelectorAll("*").forEach((el) => {
+        el.addEventListener("mouseenter", function () {
+            if (window.getComputedStyle(el).cursor === "grab") {
+                cursorOutline.style.width = "60px";  // Double the size
+                cursorOutline.style.height = "60px";
+                cursorOutline.innerHTML = "<  >"; // Add arrows
+                cursorOutline.style.display = "flex";
+                cursorOutline.style.alignItems = "center";
+                cursorOutline.style.justifyContent = "center";
+                cursorOutline.style.fontSize = "20px";
+                cursorOutline.style.fontWeight = "bold";
+                cursorDot.style.display = "none"; // Hide cursor dot
+            }
+        });
 
-window.addEventListener("mousemove", function(e){
-  coords.x = e.clientX;
-  coords.y = e.clientY;
-  
-});
-
-function animateCircles() {
-  
-  let x = coords.x;
-  let y = coords.y;
-  
-  circles.forEach(function (circle, index) {
-    circle.style.left = x - 12 + "px";
-    circle.style.top = y - 12 + "px";
-    
-    circle.style.scale = (circles.length - index) / circles.length;
-    
-    circle.x = x;
-    circle.y = y;
-
-    const nextCircle = circles[index + 1] || circles[0];
-    x += (nextCircle.x - x) * 0.3;
-    y += (nextCircle.y - y) * 0.3;
-  });
- 
-  requestAnimationFrame(animateCircles);
-}
-
-animateCircles();
-
+        el.addEventListener("mouseleave", function () {
+            cursorOutline.style.width = "30px";
+            cursorOutline.style.height = "30px";
+            cursorOutline.innerHTML = ""; // Remove arrows
+            cursorDot.style.display = "block"; // Show cursor dot
+        });
+    });
   </script>
   
 </body>

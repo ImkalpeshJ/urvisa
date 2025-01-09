@@ -352,8 +352,8 @@ body{
   border: none;
   border-radius: 0px !important;
   text-align: center;
-  background-color: #E69515;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -372,7 +372,7 @@ body{
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color:#fff;
+  background-color:#E69515;
   transition: 1s ease;
 }
 .ylw-btn:focus:after, .ylw-btn:focus:before, .ylw-btn:hover:after, .ylw-btn:hover:before, .ylw-btn:active:after, .ylw-btn:active:before{
@@ -2074,6 +2074,9 @@ input[type="number"]::-webkit-inner-spin-button,
   .wcu-card .wcu-card-text {
     font-size: 14px;
   }
+  .mob-br{
+    display: none !important;
+  }
 }
 /* Small devices */
 @media (max-width: 767px) {
@@ -2308,4 +2311,89 @@ input[type="number"]::-webkit-inner-spin-button,
   border: 1px solid #ddd;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+.service-image{
+  object-fit: contain;
+  width: 100px;
+  height: 150px;
+}
+
+.my-card-service {
+  border: 0;
+  background-color: #f5f5f5;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.my-card-service:hover {
+  background-color: #FFF8ED;
+}
+
+.my-card-service .card-img-top {
+  filter: grayscale(1);
+  transition: filter 0.4s ease-in-out;
+}
+
+.my-card-service:hover .card-img-top {
+  filter: grayscale(0);
+}
+
+.my-card-service .card-title {
+  text-align: start;
+  font-weight: 600;
+  font-size: 27px;
+  transition: color 0.4s ease-in-out;
+}
+
+.my-card-service:hover .card-title {
+  color: var(--theme-color);
+  font-weight: bold;
+}
+
+p.card-text.service-text {
+  text-align: start;
+  font-size: 17px;
+  font-weight: 300;
+  color: #393939;
+  margin-bottom: 1rem !important;
+  transition: color 0.4s ease-in-out;
+}
+
+.my-card-service:hover p.card-text.service-text {
+  color: #000;
+  font-weight: 400;
+}
+@media (max-width: 768px){
+  .my-card-service .card-title{
+    font-size: 25px;
+  }
+  p.card-text.service-text{
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px){
+  .my-card-service .card-title{
+    font-size: 21px;
+  }
+  p.card-text.service-text{
+    font-size: 11px;
+  }
+}
+.cursor-dot{
+  width:10px;
+  height:10px;
+  background-color:#000;
+}
+.cursor-outline{
+  width:30px;
+  height:30px;
+  border:2px solid #000;
+}
+.cursor-dot, .cursor-outline{
+  position:fixed;
+  top:0;
+  left:0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index:10000000000000000;
+  pointer-events: none;
 }
