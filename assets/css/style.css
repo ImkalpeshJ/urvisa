@@ -278,7 +278,9 @@ body{
   .about-us{
     margin-top: 35px;
   }
-  
+    .cursor-dot, .cursor-outline{
+    display: none;
+  }
 }
 
 
