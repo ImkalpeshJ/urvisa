@@ -8,6 +8,8 @@
     <link rel="apple-touch-icon" href="favicon.ico" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Project CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -50,7 +52,20 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-
+<style>
+    .ylw-btn{
+        padding: 20px 12px !important;
+        text-align: start;
+        font-weight: 600;
+        font-size: 20px;
+        transition: color 0.4s ease-in-out;
+    }
+    .ylw-btn.active{
+        color: white !important;
+        background-color: var(--theme-color) !important;
+        outline: 2px solid #e69515 !important;
+    }
+</style>
 <body>
     <div class="cursor-dot" data-cursor-dot></div>
   <div class="cursor-outline" data-cursor-outline></div>
@@ -129,10 +144,7 @@
     </div>
 
     <!-- Section 1 -->
-    <div class="space-top text-center overflow-hidden shape-mockup-wrap" style="    
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;">
+    <div class="space-top text-center overflow-hidden shape-mockup-wrap">
 
         <div class="container">
             <div class="row">
@@ -171,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="space">
+            <!-- <div class="space">
                 <div class="row gy-30 gx-30">
                     <div class="col-xl-6 col-md-12">
                         <div class="card my-card-service">
@@ -278,10 +290,1563 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+    <div class="space text-center overflow-hidden shape-mockup-wrap" style="background-image: url('assets/images/what-we-do.png');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead hat-desc subcomponent about-us mini-title justify-content-center animated" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;">
+                        <img src="assets/images/bullets.svg" alt="">
+                        <span>WHAT WE DO</span>
+                    </p>
+                    <h1 class="display-4 section-1-head subcomponent text-center animated" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;">We provide excellent service to our customers</h1>
+                </div>
+            </div>
+            <div class="row gy-50 mt-5">
+                <div class="col-lg-4">
+                    <ul class="why-tab-wrap nav nav-pills" role="tablist">
+                        <li class="nav-item" id="1s">
+                            <button class="nav-link prevent-scroll active" id="why-pill-1-tab" data-bs-toggle="pill" data-scroll="1s" data-bs-target="#why-pill-1" type="button" role="tab" aria-controls="why-pill-1" aria-selected="true">Building & Industrial Audits <i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob active tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service1.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Building & Industrial Audits</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            Our audits are designed to ensure compliance, enhance safety, and optimize operational efficiency across diverse sectors. Tailored to industry standards, we cover every critical aspect of building and industrial safety and functionality.
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                The audits also covers services such as:
+                                            </p>
+                                        </div>
+                                        <div class="some-points row mb-3">
+                                            <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Energy</span>
+                                            </div>
+                                            <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Safety</span>
+                                            </div>
+                                            <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Fire</span>
+                                            </div>
+                                            <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Structural</span>
+                                            </div>
+                                            <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>IT Security</span>
+                                            </div>
+                                            <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Technical Due Diligence</span>
+                                            </div>
+                                            <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Peer Review</span>
+                                            </div>
+                                            <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Water</span>
+                                            </div>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            To provide the services for conducting Safety Audit as per IS14489:2018 guidelines, which covers storage safety, process safety, electrical safety and Fire safety.
+                                        </p>
+                                        <p class="tab-desc">
+                                            Also, provide inspection of structure, valuation, factory plan approval from DISH (Directorate of Industrial Safety and Health), factory license etc. We provide Audit Services for Commercial, Healthcare, Hospitality, Educational, Industrial and Warehouse and Residential projects.
+                                        </p>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="2s">
+                            <button class="nav-link prevent-scroll" id="why-pill-2-tab" data-scroll="2s" data-bs-toggle="pill" data-bs-target="#why-pill-2" type="button" role="tab" aria-controls="why-pill-2" aria-selected="false">Building Information Modeling <i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service2.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">BIM: Building Information Modeling</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            Our BIM expertise spans architecture, structural design, MEP systems, and project planning, ensuring seamless integration and enhanced efficiency. Whether it’s CAD-to-BIM migration or delivering sustainable solutions, we help achieve safer project outcomes.
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Our Expertise I BIM Services:
+                                            </p>
+                                        </div>
+                                        <div class="some-points row mb-3">
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                    <span>BIM For:</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Architecture</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Structure</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>MEPF</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Planning, Schedule, Sequencing</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Estimate and Quantity take off</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Facility Management</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Reality Capture (Point Cloud)</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>3D Visualization</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>CAD to BIM Migration</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                    <span>Covers:</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>3D Modelling</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>4D Modelling</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>5D Modelling</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>6D Modelling</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>7D Modelling</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>BIM Coordination (incl. clash detection)</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>3D Rendering</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Point Cloud Modelling</span>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            Urvisa is focused on using design software in new and emerging domains in order to
+    deliver efficient, safer, robust and cost - efficient solutions t o o u r clients. With
+    unparalleled expertise, provides effective services to the Architecture, Engineering
+    and Construction industry with its Building Information Modelling (BIM) service.
+                                        </p>                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="3s">
+                            <button class="nav-link prevent-scroll" id="why-pill-3-tab" data-scroll="3s" data-bs-toggle="pill" data-bs-target="#why-pill-3" type="button" role="tab" aria-controls="why-pill-3" aria-selected="false">Cost Management <i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service3.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Cost Management</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            By providing expert advice during the planning stage and throughout the project, we help you achieve maximum value for money. Our collaborative approach guarantees that your project stays within budget without compromising quality, ensuring timely completion and financial efficiency.
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                The cost management also covers services such as:
+                                            </p>
+                                        </div>
+                                        <div class="some-points row mb-3">
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Cost Budgets and Estimation-Feasibility, Concept</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Schematic and GFC</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Bench Marking</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Value Engineering</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>BOQ Preparation, Validation</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Tender Management</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Post Contract Cost Management:
+                                                        Billing, Bill Certification,</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Project Financial Audits- 
+                                                        Bill verification, Cost to Complete etc.</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                    <span>Software :</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>AutoCad</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Costx</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Plan Swift</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>MS Office</span>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            The awareness of value for money is central to every investment strategy. In fact, failure to achieve accurate cost planning can expose investors to substantial risk. Our people understand the need to accurately advise on costs and procurement at planning stage especially in a world where commodity and resource costs fluctuate so rapidly. Our collaborative and expert teams work from inception to completion, providing cost planning and commercial management advice that ensure value for money within any budget.
+                                        </p>                                  
+                                    </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="nav-item" id="4s">
+                            <button class="nav-link prevent-scroll" id="why-pill-4-tab" data-scroll="4s" data-bs-toggle="pill" data-bs-target="#why-pill-4" type="button" role="tab" aria-controls="why-pill-4" aria-selected="false">Rebar and Steel, Precast Detailing <i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service4.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Rebar and Steel, Precast Detailing</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            We offer wide range of rebar sizes, diameters, and strength levels to suit different construction needs. Our expertise in breaking down rebar elements into precise bending shapes, lengths, steel grades, and diameters ensures efficient material use and minimizes construction errors.
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                The cost management also covers services such as:
+                                            </p>
+                                        </div>
+                                        <div class="some-points row mb-3">
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar Concrete Shop Drawings</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Bar Bending Schedules</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Concrete Masonry Detailing </span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar Placement Drawings</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>As Built Drawings Services </span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Retaining Wall Detailing </span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar Foundation Detailing </span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Reality Capture (Point Cloud)</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar Design Services</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar Junction Coordination 
+                                                        Drawings</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>High Quality Detailing Suiting</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Concrete masonry detailing</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar detailing, drawing,
+                                                        estimating</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>3d modeling of Rebar using 
+                                                        Tekla structures</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Quality take-offs including 
+                                                        Rebar & Concrete</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Rebar lists for Beams, Slabs, 
+                                                        Columns Walls, Foundations
+                                                        and other Structues</span>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
+                                                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="5s">
+                            <button class="nav-link prevent-scroll" id="why-pill-5-tab" data-scroll="5s" data-bs-toggle="pill" data-bs-target="#why-pill-5" type="button" role="tab" aria-controls="why-pill-5" aria-selected="false">3D Mapping: Point Cloud- Scan to... <i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service5.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">3D Mapping: Point Cloud- Scan to BIM for As-Built</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            Leveraging laser scanning and advanced modeling techniques, we empower architects, engineers, and project managers with precise as-built data, enhancing project planning, reducing errors, and streamlining renovation, construction, and facility management processes. 
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Scan to BIM for Reality Capture and As-Built
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            A point cloud is a set of data points in space. Point clouds are produced by 3D laser scanners, which measure a large number of points on the external surfaces of objects around them. Point Clouds are a collection of points that represent a 3D shape or feature. <br>
+    We can provide this, Scan to BIM support for renovation projects, heritage documentation and as well as for Greenfield projects as well, where we capture as-built for quality check for work put in place. We provide both scanning and modelling of facilities.
+                                        </p>    
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                LASER SCANNING SURVEY:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            Laser scanning is a fast and precise survey technology for capturing the as-built status of assets and creating 3D data. It combines accurate dimension control with 360° scanning, producing point clouds with ±3mm accuracy. These models support 2D validation, clash detection, tie-in point identification, and facility management.
+                                        </p>   
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Software's for 3D scanning:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            Faro scene, Cyclone modeller, Autucad plant 3D, PDMS, Cadmatic, Autocad
+    Blander, Revit, SOLIDWORK Siemens UX
+                                        </p>                                 
+                                    </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="nav-item" id="6s">
+                            <button class="nav-link prevent-scroll" id="why-pill-6-tab" data-scroll="6s" data-bs-toggle="pill" data-bs-target="#why-pill-6" type="button" role="tab" aria-controls="why-pill-6" aria-selected="false">Design Services<i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service6.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Design Services: <span style="font-weight: 400;">Architecture , Structural, MEPF Design, Detailing and Engineering</span></h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            We maximize property potential and value through a holistic approach: analyzing client needs and market trends, creating functional and ambiance-driven designs tailored to workflows, and ensuring seamless execution with cost management, land liaisoning, approvals, and efficient documentation for timely, budget-friendly delivery.
+                                        </p>
+                                        <div class="some-points row mb-3">
+                                            <div class="col-lg-12">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Options for reducing energy consumption</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Sustainable energy sources</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Efficient land use, building orientation and design</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Materials sourcing and management of site resource use</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Selection of materials/ components with lifecycle benefits such as 
+                                                        reduced maintenance costs</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Ecological conservation and site enhancement measures</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Measures to reduce CO2 emissions from plant, equipment and 
+                                                        site accommodation.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                MEPF Services
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            Our MEPF services enhance building functionality, efficiency, and safety with optimized systems for plumbing, electrical, HVAC, and sustainable energy. Expert consultants adapt to demand cycles, utilizing off-peak periods for research and training to deliver top-quality results year-round.
+                                        </p>   
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Software
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AutoCad, Cype cad MEP, Act Cad, Vectorworks, Graebert, Etab, Cable Sizer, Dailux, Visio, Hap, Duct Calculator, Fan Selector, Storm and Sanitary Cad, Sewer Gems, Water Gems, Drain net and Air net
+                                        </p>                                  
+                                    </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="nav-item" id="7s">
+                            <button class="nav-link prevent-scroll" id="why-pill-7-tab" data-scroll="7s" data-bs-toggle="pill" data-bs-target="#why-pill-7" type="button" role="tab" aria-controls="why-pill-7" aria-selected="false">Design & Execution Management<i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service7.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Design & Execution Management</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            We ensure a seamless transition from concept to completion in construction projects. By coordinating both the design phase (including architectural plans and engineering details) and the construction phase, we ensure that every project is executed efficiently, meeting timelines, budgets, and quality standards.
+                                        </p>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            Design and Execution Management is a holistic process focused on successfully delivering projects by managing design development, budgets, procurement, supply chains, health and safety, schedules, and stakeholder engagement. It requires meticulous coordination across pre- and post-contract phases, with careful scheduling to meet deadlines and enforce safety measures to ensure compliance. This multifaceted approach relies on strategic planning, attention to detail, and effective communication to achieve project goals within quality, cost, and timeline parameters.
+                                        </p>                                  
+                                    </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="nav-item" id="8s">
+                            <button class="nav-link prevent-scroll" data-scroll="8s" id="why-pill-8-tab" data-bs-toggle="pill" data-bs-target="#why-pill-8" type="button" role="tab" aria-controls="why-pill-8" aria-selected="false">Training / Coaching<i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service8.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Training / Coaching</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            URVISA also provides extensive training courses in AutoDesk BIM 360, AutoDesk Revit, Rebar Steel Detailing, MEPF Designing & knowledge enhancing, Workshops on 3D Laser Scanning, GIS, Soft skill development for individuals, corporations, and academic institutions.
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Eligibility Criteria:
+                                            </p>
+                                        </div>
+                                        <div class="some-points row mb-3">
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>BIM For:</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Architecture</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Civil</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Electrical & Mechanical Branches</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Students of 3rd & Final Year</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Pass Outs</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Freshers</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Working Professionals</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                    <span>Software :</span>
+                                                </div>
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>AutoCad</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Costx</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>Plan Swift</span>
+                                                </div>
+                                                
+                                                <div class="point d-flex align-items-center mb-2">
+                                                    <i class="ph ph-caret-circle-right me-2"></i>
+                                                    <span>MS Office</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Timings:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            Morning: 8:00 am to 10:00 am <br>Evening: 7:00 pm to 9:00 pm
+                                        </p>   
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Duration:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            1 to 3 months
+                                        </p>                                 
+                                    </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="nav-item" id="9s">
+                            <button class="nav-link prevent-scroll" data-scroll="9s" id="why-pill-9-tab" data-bs-toggle="pill" data-bs-target="#why-pill-9" type="button" role="tab" aria-controls="why-pill-9" aria-selected="false">Artificial Intelligence<i class="ph-bold ph-arrow-up-right"></i></button>
+                            <div class="why-pill-mob tab-pane">
+                                <div class="tab-card">
+                                    <div class="card-img-top">
+                                        <img src="assets/images/service/service9.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-description">
+                                        <h5 class="card-title mb-3">Artificial Intelligence</h5>
+                                        <p class="text-start service-card_title heading-desc mb-3">
+                                            URVISA also provides extensive services for Artificial intelligence (AI) development and AI-powered solutions with our associates’ R&D center as per requirement for individuals, corporations, industries, institutions, banking sectors to grow the business with our counterpart leading data science consulting and AI software development company
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <p class="bul-des mb-0 p-0">
+                                                Artificial intelligence (AI) is a powerful tool that can help civil engineers address complex problems in a variety of areas, including:
+                                            </p>
+                                        </div>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Project planning :
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AI can help with efficient project planning and scheduling by optimizing resource allocation and timeline management. 
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Risk identification:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AI algorithms can identify risks and predict maintenance requirements during construction projects. 
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Geotechnical engineering :
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AI can improve the accuracy of soil analysis and enable better decisions. 
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Smart city development:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AI can optimize resource usage and enhance urban services. 
+    Water resource management: AI can optimize the distribution and use of water resources in urban and rural environments. 
+    
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Construction safety :
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AI can track interactions between personnel, machinery, and items on the job site to identify potential safety hazards. 
+                                        </p>
+                                        <div class="bullet-title mb-3">
+                                            <div class="bul">
+                                                <img src="/assets/images/logos/i1.svg" alt="">
+                                            </div>
+                                            <p class="bul-des mb-0">
+                                                Fire detection:
+                                            </p>
+                                        </div>
+                                        <p class="tab-desc mb-3">
+                                            AI can detect fires early, protecting people and infrastructure.
+                                        </p>                                  
+                                    </div>
+                                </div>
+                              </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content why-web">
+                        <div class="tab-pane fade show active" id="why-pill-1" role="tabpanel" aria-labelledby="why-pill-1-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service1.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Building & Industrial Audits</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        Our audits are designed to ensure compliance, enhance safety, and optimize operational efficiency across diverse sectors. Tailored to industry standards, we cover every critical aspect of building and industrial safety and functionality.
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            The audits also covers services such as:
+                                        </p>
+                                    </div>
+                                    <div class="some-points row mb-3">
+                                        <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Energy</span>
+                                        </div>
+                                        <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Safety</span>
+                                        </div>
+                                        <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Fire</span>
+                                        </div>
+                                        <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Structural</span>
+                                        </div>
+                                        <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>IT Security</span>
+                                        </div>
+                                        <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Technical Due Diligence</span>
+                                        </div>
+                                        <div class="point col-lg-5 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Peer Review</span>
+                                        </div>
+                                        <div class="point col-lg-6 d-flex align-items-center mb-2">
+                                            <i class="ph ph-caret-circle-right me-2"></i>
+                                            <span>Water</span>
+                                        </div>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        To provide the services for conducting Safety Audit as per IS14489:2018 guidelines, which covers storage safety, process safety, electrical safety and Fire safety.
+                                    </p>
+                                    <p class="tab-desc">
+                                        Also, provide inspection of structure, valuation, factory plan approval from DISH (Directorate of Industrial Safety and Health), factory license etc. We provide Audit Services for Commercial, Healthcare, Hospitality, Educational, Industrial and Warehouse and Residential projects.
+                                    </p>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-2" role="tabpanel" aria-labelledby="why-pill-2-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service2.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">BIM: Building Information Modeling</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        Our BIM expertise spans architecture, structural design, MEP systems, and project planning, ensuring seamless integration and enhanced efficiency. Whether it’s CAD-to-BIM migration or delivering sustainable solutions, we help achieve safer project outcomes.
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Our Expertise I BIM Services:
+                                        </p>
+                                    </div>
+                                    <div class="some-points row mb-3">
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                <span>BIM For:</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Architecture</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Structure</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>MEPF</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Planning, Schedule, Sequencing</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Estimate and Quantity take off</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Facility Management</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Reality Capture (Point Cloud)</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>3D Visualization</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>CAD to BIM Migration</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                <span>Covers:</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>3D Modelling</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>4D Modelling</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>5D Modelling</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>6D Modelling</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>7D Modelling</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>BIM Coordination (incl. clash detection)</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>3D Rendering</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Point Cloud Modelling</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        Urvisa is focused on using design software in new and emerging domains in order to
+deliver efficient, safer, robust and cost - efficient solutions t o o u r clients. With
+unparalleled expertise, provides effective services to the Architecture, Engineering
+and Construction industry with its Building Information Modelling (BIM) service.
+                                    </p>                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-3" role="tabpanel" aria-labelledby="why-pill-3-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service3.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Cost Management</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        By providing expert advice during the planning stage and throughout the project, we help you achieve maximum value for money. Our collaborative approach guarantees that your project stays within budget without compromising quality, ensuring timely completion and financial efficiency.
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            The cost management also covers services such as:
+                                        </p>
+                                    </div>
+                                    <div class="some-points row mb-3">
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Cost Budgets and Estimation-Feasibility, Concept</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Schematic and GFC</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Bench Marking</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Value Engineering</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>BOQ Preparation, Validation</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Tender Management</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Post Contract Cost Management:
+                                                    Billing, Bill Certification,</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Project Financial Audits- 
+                                                    Bill verification, Cost to Complete etc.</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                <span>Software :</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>AutoCad</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Costx</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Plan Swift</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>MS Office</span>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        The awareness of value for money is central to every investment strategy. In fact, failure to achieve accurate cost planning can expose investors to substantial risk. Our people understand the need to accurately advise on costs and procurement at planning stage especially in a world where commodity and resource costs fluctuate so rapidly. Our collaborative and expert teams work from inception to completion, providing cost planning and commercial management advice that ensure value for money within any budget.
+                                    </p>                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-4" role="tabpanel" aria-labelledby="why-pill-4-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service4.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Rebar and Steel, Precast Detailing</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        We offer wide range of rebar sizes, diameters, and strength levels to suit different construction needs. Our expertise in breaking down rebar elements into precise bending shapes, lengths, steel grades, and diameters ensures efficient material use and minimizes construction errors.
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            The cost management also covers services such as:
+                                        </p>
+                                    </div>
+                                    <div class="some-points row mb-3">
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar Concrete Shop Drawings</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Bar Bending Schedules</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Concrete Masonry Detailing </span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar Placement Drawings</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>As Built Drawings Services </span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Retaining Wall Detailing </span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar Foundation Detailing </span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Reality Capture (Point Cloud)</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar Design Services</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar Junction Coordination 
+                                                    Drawings</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>High Quality Detailing Suiting</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Concrete masonry detailing</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar detailing, drawing,
+                                                    estimating</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>3d modeling of Rebar using 
+                                                    Tekla structures</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Quality take-offs including 
+                                                    Rebar & Concrete</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Rebar lists for Beams, Slabs, 
+                                                    Columns Walls, Foundations
+                                                    and other Structues</span>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-5" role="tabpanel" aria-labelledby="why-pill-5-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service5.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">3D Mapping: Point Cloud- Scan to BIM for As-Built</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        Leveraging laser scanning and advanced modeling techniques, we empower architects, engineers, and project managers with precise as-built data, enhancing project planning, reducing errors, and streamlining renovation, construction, and facility management processes. 
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Scan to BIM for Reality Capture and As-Built
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        A point cloud is a set of data points in space. Point clouds are produced by 3D laser scanners, which measure a large number of points on the external surfaces of objects around them. Point Clouds are a collection of points that represent a 3D shape or feature. <br>
+We can provide this, Scan to BIM support for renovation projects, heritage documentation and as well as for Greenfield projects as well, where we capture as-built for quality check for work put in place. We provide both scanning and modelling of facilities.
+                                    </p>    
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            LASER SCANNING SURVEY:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        Laser scanning is a fast and precise survey technology for capturing the as-built status of assets and creating 3D data. It combines accurate dimension control with 360° scanning, producing point clouds with ±3mm accuracy. These models support 2D validation, clash detection, tie-in point identification, and facility management.
+                                    </p>   
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Software's for 3D scanning:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        Faro scene, Cyclone modeller, Autucad plant 3D, PDMS, Cadmatic, Autocad
+Blander, Revit, SOLIDWORK Siemens UX
+                                    </p>                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-6" role="tabpanel" aria-labelledby="why-pill-6-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service6.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Design Services: <span style="font-weight: 400;">Architecture , Structural, MEPF Design, Detailing and Engineering</span></h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        We maximize property potential and value through a holistic approach: analyzing client needs and market trends, creating functional and ambiance-driven designs tailored to workflows, and ensuring seamless execution with cost management, land liaisoning, approvals, and efficient documentation for timely, budget-friendly delivery.
+                                    </p>
+                                    <div class="some-points row mb-3">
+                                        <div class="col-lg-12">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Options for reducing energy consumption</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Sustainable energy sources</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Efficient land use, building orientation and design</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Materials sourcing and management of site resource use</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Selection of materials/ components with lifecycle benefits such as 
+                                                    reduced maintenance costs</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Ecological conservation and site enhancement measures</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Measures to reduce CO2 emissions from plant, equipment and 
+                                                    site accommodation.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            MEPF Services
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        Our MEPF services enhance building functionality, efficiency, and safety with optimized systems for plumbing, electrical, HVAC, and sustainable energy. Expert consultants adapt to demand cycles, utilizing off-peak periods for research and training to deliver top-quality results year-round.
+                                    </p>   
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Software
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AutoCad, Cype cad MEP, Act Cad, Vectorworks, Graebert, Etab, Cable Sizer, Dailux, Visio, Hap, Duct Calculator, Fan Selector, Storm and Sanitary Cad, Sewer Gems, Water Gems, Drain net and Air net
+                                    </p>                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-7" role="tabpanel" aria-labelledby="why-pill-7-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service7.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Design & Execution Management</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        We ensure a seamless transition from concept to completion in construction projects. By coordinating both the design phase (including architectural plans and engineering details) and the construction phase, we ensure that every project is executed efficiently, meeting timelines, budgets, and quality standards.
+                                    </p>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        Design and Execution Management is a holistic process focused on successfully delivering projects by managing design development, budgets, procurement, supply chains, health and safety, schedules, and stakeholder engagement. It requires meticulous coordination across pre- and post-contract phases, with careful scheduling to meet deadlines and enforce safety measures to ensure compliance. This multifaceted approach relies on strategic planning, attention to detail, and effective communication to achieve project goals within quality, cost, and timeline parameters.
+                                    </p>                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-8" role="tabpanel" aria-labelledby="why-pill-8-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service8.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Training / Coaching</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        URVISA also provides extensive training courses in AutoDesk BIM 360, AutoDesk Revit, Rebar Steel Detailing, MEPF Designing & knowledge enhancing, Workshops on 3D Laser Scanning, GIS, Soft skill development for individuals, corporations, and academic institutions.
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Eligibility Criteria:
+                                        </p>
+                                    </div>
+                                    <div class="some-points row mb-3">
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>BIM For:</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Architecture</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Civil</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Electrical & Mechanical Branches</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Students of 3rd & Final Year</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Pass Outs</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Freshers</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Working Professionals</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph-fill ph-caret-circle-down me-2"></i>
+                                                <span>Software :</span>
+                                            </div>
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>AutoCad</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Costx</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>Plan Swift</span>
+                                            </div>
+                                            
+                                            <div class="point d-flex align-items-center mb-2">
+                                                <i class="ph ph-caret-circle-right me-2"></i>
+                                                <span>MS Office</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Timings:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        Morning: 8:00 am to 10:00 am <br>Evening: 7:00 pm to 9:00 pm
+                                    </p>   
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Duration:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        1 to 3 months
+                                    </p>                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-9" role="tabpanel" aria-labelledby="why-pill-9-tab">
+                            <div class="tab-card">
+                                <div class="card-img-top">
+                                    <img src="assets/images/service/service9.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-description">
+                                    <h5 class="card-title mb-3">Artificial Intelligence</h5>
+                                    <p class="text-start service-card_title heading-desc mb-3">
+                                        URVISA also provides extensive services for Artificial intelligence (AI) development and AI-powered solutions with our associates’ R&D center as per requirement for individuals, corporations, industries, institutions, banking sectors to grow the business with our counterpart leading data science consulting and AI software development company
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <p class="bul-des mb-0 p-0">
+                                            Artificial intelligence (AI) is a powerful tool that can help civil engineers address complex problems in a variety of areas, including:
+                                        </p>
+                                    </div>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Project planning :
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AI can help with efficient project planning and scheduling by optimizing resource allocation and timeline management. 
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Risk identification:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AI algorithms can identify risks and predict maintenance requirements during construction projects. 
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Geotechnical engineering :
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AI can improve the accuracy of soil analysis and enable better decisions. 
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Smart city development:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AI can optimize resource usage and enhance urban services. 
+Water resource management: AI can optimize the distribution and use of water resources in urban and rural environments. 
 
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Construction safety :
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AI can track interactions between personnel, machinery, and items on the job site to identify potential safety hazards. 
+                                    </p>
+                                    <div class="bullet-title mb-3">
+                                        <div class="bul">
+                                            <img src="/assets/images/logos/i1.svg" alt="">
+                                        </div>
+                                        <p class="bul-des mb-0">
+                                            Fire detection:
+                                        </p>
+                                    </div>
+                                    <p class="tab-desc mb-3">
+                                        AI can detect fires early, protecting people and infrastructure.
+                                    </p>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        document.querySelectorAll('.nav-pills .nav-link').forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove 'active' class and set aria-selected="false" for all buttons
+            document.querySelectorAll('.nav-pills .nav-link').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+
+            // Add 'active' class and set aria-selected="true" for the clicked button
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+        });
+    });
+
+    // Select all buttons with the class "prevent-scroll"
+
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const data = urlParams.get('data');  // Get the 'data' query parameter from the URL
+
+  console.log("URL parameter 'data':", data);  // Log the 'data' parameter
+
+  // If the 'data' parameter exists, proceed to click the corresponding button
+  if (data) {
+    const button = document.querySelector(`button[data-scroll="${data}"]`);
+    
+    if (button) {
+      console.log("Found button:", button);
+      button.click();
+      
+      const targetSection = document.getElementById(data);
+      if (targetSection) {
+        console.log("Found target section:", targetSection);
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        console.log("Scrolling to target section:", data);
+      } else {
+        console.log("Target section not found for id:", data);
+      }
+    } else {
+      console.log("Button not found for data-scroll:", data);
+    }
+  } else {
+    console.log("No 'data' parameter found in URL.");
+  }
+});
+
+    </script>
+    <script>
+document.querySelectorAll('.nav-link').forEach(function (tab) {
+  tab.addEventListener('click', function (event) {
+    // Close all mobile content sections first
+    document.querySelectorAll('.why-pill-mob').forEach(function (mobContent) {
+      mobContent.classList.remove('active');
+      mobContent.style.opacity = '0'; // Fade out
+      mobContent.style.visibility = 'hidden'; // Hide content
+      mobContent.style.display = 'none'; // Ensure it doesn't take space
+    });
+
+    // Find the closest parent .nav-item of the clicked tab
+    var tabItem = event.target.closest('.nav-item');
+
+    // Find the corresponding mobile content
+    var mobileContent = tabItem.querySelector('.why-pill-mob');
+
+    // Toggle the visibility of the mobile content only for screens below 992px
+    if (mobileContent && window.innerWidth < 992) {
+      if (mobileContent.classList.contains('active')) {
+        // Collapse the mobile content
+        mobileContent.classList.remove('active');
+        mobileContent.style.opacity = '0'; // Fade out
+        mobileContent.style.visibility = 'hidden'; // Hide content
+        mobileContent.style.display = 'none'; // Ensure it doesn't take space
+      } else {
+        // Expand the mobile content
+        mobileContent.classList.add('active');
+        mobileContent.style.opacity = '1'; // Fade in
+        mobileContent.style.visibility = 'visible'; // Make visible
+        mobileContent.style.display = 'block'; // Make it take space
+      }
+
+      // Scroll the clicked tab button into view with a fixed offset from the top
+      window.scrollTo({
+        top: tabItem.offsetTop - 300,  // Scroll to the button position with offset
+        behavior: 'smooth'             // Smooth scroll
+      });
+    }
+
+    // Find the corresponding web content and activate it
+    var targetId = tab.getAttribute('data-bs-target');
+    var content = document.querySelector(targetId);
+    if (content) {
+      content.classList.add('show', 'active');
+    }
+  });
+});
+
+    </script>
     <footer id="footer"
         style="background: url('assets/images/footer-bg.png'); background-size: cover;background-repeat: no-repeat;">
         <div class="footer-top">
