@@ -49,6 +49,61 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Modal styles */
+.modal-content {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.modal-header {
+  background-color: var(--theme-color); /* Theme color for header */
+  color: #fff; /* White text for contrast */
+  border-bottom: none; /* Remove default border */
+  padding: 1rem 1.5rem;
+}
+
+.modal-header .btn-close {
+  background-color: #fff; /* White close button */
+  border-radius: 50%; /* Rounded close button */
+  opacity: 0.8;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.modal-body {
+  padding: 0; /* Remove padding for full-image display */
+}
+
+.modal-body img {
+  border-radius: 0; /* No border-radius for the image */
+  max-height: 80vh; /* Ensure image fits within viewport */
+  object-fit: contain; /* Maintain image aspect ratio */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 10px; /* Add margin for better fit */
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+}
+
+
+
+    </style>
 </head>
 
 <body>
@@ -81,7 +136,7 @@
                 <a class="nav-link" href="/aboutus.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="/contact-us.html">Contact Us</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -130,65 +185,589 @@
             
             <div class="portfolio-slider2 overflow-hidden">
               <div class="row gy-30 gx-30">
-                  <div class="col-lg-4">
-                      <div class="portfolio-card style2">
-                          <div class="portfolio-card-thumb">
-                              <img src="assets/images/slide-1.png" alt="img">
-                              
-                          </div>
-                          <div class="portfolio-card-details">
-                              <span class="portfolio-card-subtitle">Commercial</span>
-                              <h4 class="portfolio-card-title">
-                                  <a href="project-details.html">Dassault Systemes, Pune</a>
-                              </h4>
-                              <p class="portofolio-card-text">BIM, 3D Mapping, Scan to BIM</p>
-                              <!-- <a href="project-details.html" class="btn-with-icon">
-                                  VIEW DETAILS
-                                  <span class="btn-icon">
-                                    <i class="ph-bold ph-arrow-up-right"></i>
-                                  </span>
-                              </a> -->
-                          </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-1.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
                       </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Dassault Systemes, Pune</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.5 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, 3D Mapping, Scan to BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-2.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-2.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Falcon)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Malpani Group</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-3.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-3.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pan India / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Wipro Ltd.</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 2 billion sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> 3D Mapping, Digitalization</p>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-lg-4">
-                      <div class="portfolio-card style2">
-                          <div class="portfolio-card-thumb">
-                            <img src="assets/images/slide-2.png" alt="img">
-                              
-                          </div>
-                          <div class="portfolio-card-details">
-                              <span class="portfolio-card-subtitle">Industrial</span>
-                              <h4 class="portfolio-card-title">
-                                  <a href="project-details.html">Acs Industries, Indapur</a>
-                              </h4>
-                              <p class="portofolio-card-text">Cost Management, Audit, Scan</p>
-                              
-                          </div>
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-4.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
                       </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Part 133)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 7.2 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-5.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-5.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (43PD)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Bhandari Associates</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.5 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-6.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Baner)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Merlin Group</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 1.3 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management, BIM</p>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-lg-4">
-                      <div class="portfolio-card style2">
-                          <div class="portfolio-card-thumb">
-                            <img src="assets/images/slide-3.png" alt="img">
-                              
-                          </div>
-                          <div class="portfolio-card-details">
-                              <span class="portfolio-card-subtitle">Residential (Life Republic)</span>
-                              <h4 class="portfolio-card-title">
-                                  <a href="project-details.html">Kolte Patil Developers Ltd., Pune</a>
-                              </h4>
-                              <p class="portofolio-card-text">BIM</p>
-                              
-                          </div>
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-7.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-7.png" alt="img">
                       </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Agile)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Malpani Group</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 2 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, Cost Management</p>
+                      </div>
+                    </div>
                   </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-8.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-8.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Hyderabad / Commercial (Marriott)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Architude Design</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> 3D Scanning</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-9.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-9.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Mohanlal Bishnoi Builders</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.26 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-10.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-10.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Eaton Technologies</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.2 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management, Audit</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-11.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-11.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Auditorium)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Venkataramanan Associates</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 25K sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Rhinoceros Modeling</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-12.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-12.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Interior Fitout</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Urbanwrk</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.7 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management, 3D Mapping</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-13.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-13.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Mumbai / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 1.1 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, Interior Fitout</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-14.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-14.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Mumbai / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 1.1 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, Interior Fitout</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-15.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-15.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.25 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, Interior Fitout</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-16.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-16.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Bengaluru / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, Interior Fitout</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-17.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Ferrero</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Land Acre:</b> 50 Acre, <b>BUA:</b> 0.8 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Design, Cost Management, BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-18.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-18.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Metro Railway...</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.3 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-19.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-19.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Indaapur / Industrial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">ACS Industries</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Land Acre:</b> 10 Acre, <b>BUA:</b> 0.1 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management, Audit, Scan</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-20.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-20.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> PAN India / Industrial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Land Acre:</b> 7 Acre, <b>BUA:</b> 0.2 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> 3D Mapping, Scan to BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-21.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (Park)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Kumar Properties</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 2.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> CM, BIM, Rebar Detailing</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-22.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-22.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (Life Republic)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Kolte Patil Developers Ltd.</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 2.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-23.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-23.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (Mamurdi)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Godrej Properties</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 1.3 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> CM, Audit</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-24.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-24.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (Mahalunge)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">K Raheja Corp</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 2.2 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-25.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Mix Used (Tathwade)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Merlin Group</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.8 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-26.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-26.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (Balewadi)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Platinum Buildcon</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-27.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-27.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Bengaluru / Residential (Somerville)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Ostraca</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 1 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-28.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-28.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (NIBM)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">K Raheja Corp</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 2.4 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Cost Management</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-29.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-29.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Mix Use (Various Project)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Millennium Engineers</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.5 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-30.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-1.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (Villa)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Aman Gopal</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 10k sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-31.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-31.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Kolhapur / Institutional</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">KIT Kolhapur</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> -</p>
+                        <p class="portofolio-card-text"><b>Service:</b> 3D Scanning, Scan to BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-32.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-32.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Residential (NDA)</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">Zopate Electrical</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.8 million sq.ft.</p>
+                        <p class="portofolio-card-text"><b>Service:</b> BIM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-33.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-33.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Rajasthan</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Land Area:</b> 120 sq.km</p>
+                        <p class="portofolio-card-text"><b>Service:</b>  GIS Mapping for water bodies, road...</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-34.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-34.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Rajasthan</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Land Area:</b> 80 sq.km</p>
+                        <p class="portofolio-card-text"><b>Service:</b> GIS Mapping for utilities</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-35.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-35.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> -</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Road Area:</b> 60 km</p>
+                        <p class="portofolio-card-text"><b>Service:</b> GIS Mapping</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="portfolio-card style2" data-image="assets/images/portfolio/slide-36.png">
+                      <div class="portfolio-card-thumb">
+                        <img src="assets/images/slide-36.png" alt="img">
+                      </div>
+                      <div class="portfolio-card-details">
+                        <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Industrial</span>
+                        <h4 class="portfolio-card-title">
+                          <a href="project-details.html">NDA</a>
+                        </h4>
+                        <p class="portofolio-card-text mb-1"><b>Land Area:</b> 40 sq.km</p>
+                        <p class="portofolio-card-text"><b>Service:</b> Mobile Mapping</p>
+                      </div>
+                    </div>
+                  </div>
+
               </div>
           </div>
           
         </div>
         
         </div>
+          <!-- Modal -->
+<div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="portfolioModalLabel">Portfolio Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="portfolioModalImage" src="" alt="Portfolio Image" class="img-fluid w-100">
+        </div>
+      </div>
+    </div>
+  </div>
     <footer id="footer"
         style="background: url('assets/images/footer-bg.png'); background-size: cover;background-repeat: no-repeat;">
         <div class="footer-top">
@@ -200,8 +779,7 @@
                                 <img src="assets/images/logo.svg" alt="" class="img-fluid" />
                             </a>
                             <p>
-                                Innovators in construction, specializing in BIM, GIS, 3D scanning, and sustainability to
-                                deliver efficient, resilient, and eco-friendly projects.
+                              Drop us a line about your project or describe a challenge your company needs help solving. We’d love to discuss how URVISA can work with you. Please get in touch via email at connect@urvisatech.com or using the form below.
                             </p>
                             <p>Monday-Friday: 09.30am-06.30pm.</p>
                         </div>
@@ -240,7 +818,7 @@
                                 <a href="#">About Us</a>
                             </li>
                             <li>
-                                <a href="" id="footerSolutionLink">Contact Us</a>
+                                <a href="/contact-us.html" id="footerSolutionLink">Contact Us</a>
                             </li>
                             <li>
                                 <a href="" id="">What We Do</a>
@@ -308,6 +886,30 @@
         </div>
 
     </footer>
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", function () {
+        // Select all portfolio cards
+        const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+        // Add click event listeners to all cards
+        portfolioCards.forEach((card) => {
+            card.addEventListener("click", function () {
+            // Get the image path from the data attribute
+            const imagePath = card.getAttribute("data-image");
+
+            // Update the modal image source
+            const modalImage = document.getElementById("portfolioModalImage");
+            modalImage.src = imagePath;
+
+            // Show the modal
+            const portfolioModal = new bootstrap.Modal(document.getElementById("portfolioModal"));
+            portfolioModal.show();
+            });
+        });
+        });
+
+    </script>
     <script>
         window.addEventListener("load", function () {
             document.getElementById("loader-wrapper").style.display = "none";
