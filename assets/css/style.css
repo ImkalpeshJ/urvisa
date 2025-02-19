@@ -129,6 +129,9 @@ body{
   font-style: normal;
   cursor:none;
 }
+.navbar-brand img{
+  width: 200px;
+}
 .circle {
   height: 15px;
   width: 15px;
@@ -278,9 +281,10 @@ body{
   .about-us{
     margin-top: 35px;
   }
-    .cursor-dot, .cursor-outline{
+  .cursor-dot, .cursor-outline{
     display: none;
   }
+  
 }
 
 
@@ -343,6 +347,7 @@ body{
 
 .display-4{
   font-size: calc(12px + 2.7vw);
+  font-weight: 800 !important;
 }
 .ylw-btn{
   position: relative;
@@ -1860,7 +1865,6 @@ a.social-pill img{
   }
 }
 .contact-us-textarea{
-  height: 158px;
   padding-top: 14px;
   background: transparent;
   border: none;
@@ -1868,6 +1872,7 @@ a.social-pill img{
   color: #fff;
   font-size: 14px;
   resize: none;
+  margin-bottom: 10px;
   &:focus-visible{
     outline: none;
   }
@@ -2440,6 +2445,7 @@ p.card-text.service-text {
   width: 100%;
 }
 .why-tab-wrap .nav-item .nav-link {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
   font-size: 18px;
   font-weight: 600;
   font-family: var(--title-font);
@@ -2708,4 +2714,252 @@ p.card-text.service-text {
   .why-web {
     display: none;
   }
+}
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  .tab-pane .tab-card .card-description .card-title {
+    font-size: 20px; /* Reduced title font size by 2px */
+  }
+
+  .service-card_title.heading-desc {
+    font-size: 14px; /* Reduced for smaller screens */
+    line-height: 24px;
+  }
+
+  .bullet-title p.bul-des {
+    font-size: 18px; /* Adjust description font size */
+  }
+
+  .some-points span {
+    font-size: 16px; /* Adjust points span font size */
+  }
+
+  .some-points i {
+    font-size: 18px; /* Adjust icon font size */
+  }
+
+  .tab-desc {
+    font-size: 16px; /* Adjust description font size */
+  }
+  
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .tab-pane .tab-card .card-description .card-title {
+    font-size: 22px; /* Reduced title font size by 2px */
+  }
+
+  .service-card_title.heading-desc {
+    font-size: 16px; /* Reduced for medium screens */
+    line-height: 26px;
+  }
+
+  .bullet-title p.bul-des {
+    font-size: 20px; /* Adjust description font size */
+  }
+
+  .some-points span {
+    font-size: 17px; /* Adjust points span font size */
+  }
+
+  .some-points i {
+    font-size: 22px; /* Adjust icon font size */
+  }
+
+  .tab-desc {
+    font-size: 17px; /* Adjust description font size */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .tab-pane .tab-card .card-description .card-title {
+    font-size: 26px; /* Reduced title font size by 2px */
+  }
+
+  .service-card_title.heading-desc {
+    font-size: 18px; /* Reduced for larger screens */
+    line-height: 30px;
+  }
+
+  .bullet-title p.bul-des {
+    font-size: 22px; /* Adjust description font size */
+  }
+
+  .some-points span {
+    font-size: 18px; /* Adjust points span font size */
+  }
+
+  .some-points i {
+    font-size: 24px; /* Adjust icon font size */
+  }
+
+  .tab-desc {
+    font-size: 18px; /* Keep description font size */
+  }
+}
+
+/* Screens between 992px and 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .tab-pane .tab-card .card-description .card-title {
+    font-size: 24px; /* Reduced title font size by 2px */
+  }
+
+  .service-card_title.heading-desc {
+    font-size: 16px; /* Reduced for medium-sized devices */
+    line-height: 28px;
+  }
+
+  .bullet-title p.bul-des {
+    font-size: 22px; /* Adjust description font size */
+  }
+
+  .some-points span {
+    font-size: 17px; /* Adjust points span font size */
+  }
+
+  .some-points i {
+    font-size: 22px; /* Adjust icon font size */
+  }
+
+  .tab-desc {
+    font-size: 17px; /* Adjust description font size */
+  }
+}
+
+.service-card_content .number{
+  font-size: 46px;
+  font-weight: 600;
+  opacity: 0.1;
+  transition: opacity 0.5s ease-in-out;
+}
+.sh-text{
+  font-size: 52px;
+  font-weight: 500;
+}
+.some-random-sh-1{
+  font-size: 15px;
+  border-left: 1px solid #000;
+  padding-left: 15px;
+}
+.team-card {
+  background: #fafafa;
+  border-radius: 0px;
+  padding: 40px 0 0 40px;
+  transition: 0.4s;
+  border: 1px solid transparent;
+  overflow: hidden;
+  position: relative;
+  background-position: bottom;
+  background-size: cover;
+  z-index: 1;
+  /* Medium Large devices */
+  /* Large devices */
+}
+.team-card_img {
+  position: relative;
+  overflow: hidden;
+  text-align: end;
+  margin-right: 0px;
+  margin-top: -80px;
+  z-index: -1;
+}
+.team-card_img img {
+  transition: 0.4s;
+  height: 458px;
+  object-fit: cover;
+  object-position: left;
+}
+.team-card_content {
+  max-width: 214px;
+}
+.team-card_title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: -0.35em;
+}
+.team-card_title a {
+  color: var(--title-color);
+}
+.team-card_title a:hover {
+  color: var(--theme-color);
+}
+.team-card_desig {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--body-font);
+  color: var(--body-color);
+  margin-bottom: 22px;
+  display: block;
+}
+.team-card .contact-btn-wrap {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: #EDEDED;
+  border-radius: 50px;
+  z-index: 1;
+}
+.team-card .contact-btn-wrap .icon-btn {
+  --btn-size: 40px;
+  border-radius: 50%;
+}
+.team-card .contact-btn-wrap .icon-btn:hover {
+  background: var(--theme-color);
+}
+.team-card .contact-btn-wrap .number {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--body-color);
+  display: block;
+  transform: rotate(-90deg) scaleX(0);
+  position: absolute;
+  bottom: -40px;
+  width: max-content;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  background: #EDEDED;
+  border-radius: 50px;
+  padding: 0 15px 0 55px;
+  transform-origin: left top;
+  z-index: -1;
+  transition: 0.4s;
+}
+.team-card .contact-btn-wrap:hover .number {
+  transform: rotate(-90deg) scaleX(1);
+}
+.team-card:hover {
+  border-color: var(--theme-color);
+}
+@media (max-width: 1399px) {
+  .team-card .team-card_img {
+    margin-top: -50px;
+  }
+  .team-card .team-card_img img {
+    height: 368px;
+  }
+}
+@media (max-width: 1199px) {
+  .team-card {
+    padding: 30px 0 0 30px;
+  }
+  .team-card .team-card_img {
+    margin-top: 0;
+  }
+  .team-card .team-card_title {
+    font-size: 24px;
+  }
+  .team-card .contact-btn-wrap {
+    bottom: 30px;
+    left: 30px;
+  }
+}
+.service-card:hover .number {
+  opacity: 1; /* Full opacity on hover */
+}
+.flickity-button-icon .arrow {
+  fill: #E69515 !important;
 }
