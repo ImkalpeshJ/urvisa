@@ -148,7 +148,7 @@ body{
 .cursor-dot {
   width: 20px;
   height: 20px;
-  background: url('/favicon.ico');
+  background: url('/urvisa/favicon.ico');
   background-size: cover;
   transition: width 0.2s ease, height 0.2s ease;
 }
@@ -2447,7 +2447,7 @@ p.card-text.service-text {
 .cursor-dot {
   width: 20px;
   height: 20px;
-  background: url('/favicon.ico');
+  background: url('/urvisa/favicon.ico');
   background-size: cover;
   transition: width 0.2s ease, height 0.2s ease;
 }
