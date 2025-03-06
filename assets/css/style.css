@@ -10,7 +10,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+body{
+  cursor: none;
+}
 a{
   text-decoration: none;
   outline: 0;
@@ -143,19 +145,20 @@ body{
   pointer-events: none;
   z-index: 99999999; /* so that it stays on top of all other elements */
 }
-.cursor-dot{
-  width: 10px;
-  height: 10px;
-  background-color: #000;
+.cursor-dot {
+  width: 20px;
+  height: 20px;
+  background: url('/favicon.ico');
+  background-size: cover;
   transition: width 0.2s ease, height 0.2s ease;
 }
-.cursor-outline{
-  width: 30px;
-  height: 30px;
+.cursor-outline {
+  width: 40px;
+  height: 40px;
   border: 2px solid #000;
 }
 .cursor-dot,
-.cursor-outline{
+.cursor-outline {
   position: fixed;
   top: 0;
   left: 0;
@@ -252,12 +255,13 @@ body{
       width: 30px;
       height: 4px;
       opacity: 1;
-      background: rgba(255, 255, 255, 0.5);
+      background: #e6951587;
       border: 0 solid white;
       border-radius: 0;
       &.is-selected {
-        background: var(--theme-color);
-        border: 0 solid var(--theme-color);
+        height: 5px;
+        background: var(--theme-color) !important;
+        border: 0.5px solid #000;
       }
     }
   }
@@ -347,7 +351,7 @@ body{
 
 .display-4{
   font-size: calc(12px + 2.7vw);
-  font-weight: 800 !important;
+  
 }
 .ylw-btn{
   position: relative;
@@ -861,6 +865,7 @@ li.touch p{
 }
 .service-card_icon img {
   transition: 0.4s;
+  width: 45px;
 }
 .service-card_icon:after {
   content: "";
@@ -899,11 +904,11 @@ li.touch p{
 }
 .icon-btn{
   display: inline-block;
-  width: var(--btn-size, 50px);
-  height: var(--btn-size, 50px);
+  width: var(--btn-size, 40px);
+  height: var(--btn-size, 40px);
   line-height: var(--btn-size, 50px);
   font-size: var(--btn-font-size, 20px);
-  background-color: var(--theme-color);
+  background-color: #0077B5;
   color: var(--white-color);
   text-align: center;
   border-radius: 0px;
@@ -921,7 +926,7 @@ li.touch p{
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 15px 24px;
+  padding: 10px 15px;
   opacity: 0;
   transition: 0.4s;
 }
@@ -958,6 +963,11 @@ li.touch p{
 }
 .mini-bullet{
   font-size: 14px;
+  margin-bottom: 4px;
+}
+.mini-bullet img{
+  width: 20px;
+  margin-right: 4px;
 }
 .btn-wrap{
   display: flex;
@@ -1476,7 +1486,7 @@ a.social-pill{
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: #E69515;
+  background-color: #25d366;
   
 }
 a.social-pill img{
@@ -1853,29 +1863,48 @@ a.social-pill img{
     font-size: 20px;
   }
 }
-.contact-us-input{
+
+/* Contact form inputs */
+.contact-us-input {
   height: 50px;
-  background: transparent;
+  background: #404040e7;
   border: none;
-  border-bottom: 1px solid var(--theme-color);
   font-size: 14px;
   color: #fff;
-  &:focus-visible{
-    outline: none;
-  }
+  width: 100%;
+  padding: 0 10px;
+  transition: border-color 0.3s;
 }
-.contact-us-textarea{
+.form-control:focus{
+  background: #404040e7;
+  color: #fff;
+}
+.contact-us-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.contact-us-input:focus-visible {
+  outline: none;
+  border-bottom-color: #fff; /* highlight on focus */
+}
+
+/* Textarea styling */
+.contact-us-textarea {
   padding-top: 14px;
-  background: transparent;
+  background: #404040e7;
   border: none;
-  border-bottom: 1px solid var(--theme-color);
   color: #fff;
   font-size: 14px;
   resize: none;
+  width: 100%;
   margin-bottom: 10px;
-  &:focus-visible{
-    outline: none;
-  }
+  transition: border-color 0.3s;
+}
+.contact-us-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.contact-us-textarea:focus-visible {
+  outline: none;
+  border-bottom-color: #fff;
 }
 input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
@@ -2415,15 +2444,17 @@ p.card-text.service-text {
     font-size: 11px;
   }
 }
-.cursor-dot{
-  width:10px;
-  height:10px;
-  background-color:#000;
+.cursor-dot {
+  width: 20px;
+  height: 20px;
+  background: url('/favicon.ico');
+  background-size: cover;
+  transition: width 0.2s ease, height 0.2s ease;
 }
-.cursor-outline{
-  width:30px;
-  height:30px;
-  border:2px solid #000;
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
 }
 .cursor-dot, .cursor-outline{
   position:fixed;
@@ -2854,6 +2885,8 @@ p.card-text.service-text {
   background-position: bottom;
   background-size: cover;
   z-index: 1;
+  height: 380px;
+  width: 380px;
   /* Medium Large devices */
   /* Large devices */
 }
@@ -2907,7 +2940,7 @@ p.card-text.service-text {
   border-radius: 50%;
 }
 .team-card .contact-btn-wrap .icon-btn:hover {
-  background: var(--theme-color);
+  background-color: #0077B5;
 }
 .team-card .contact-btn-wrap .number {
   font-size: 16px;
@@ -2938,13 +2971,14 @@ p.card-text.service-text {
   .team-card .team-card_img {
     margin-top: -50px;
   }
-  .team-card .team-card_img img {
+  .team-card_img img {
     height: 368px;
   }
 }
 @media (max-width: 1199px) {
   .team-card {
     padding: 30px 0 0 30px;
+    width: auto;
   }
   .team-card .team-card_img {
     margin-top: 0;
@@ -2955,6 +2989,7 @@ p.card-text.service-text {
   .team-card .contact-btn-wrap {
     bottom: 30px;
     left: 30px;
+    
   }
 }
 .service-card:hover .number {
