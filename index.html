@@ -160,6 +160,9 @@
     </div>
   </nav>
   <div class="social-icons">
+    <a class="social-pill whatsapp fs-1 text-white position-relative" href="#contact-us" style="cursor: pointer;background: var(--theme-color);">
+      <i class="ph-fill ph-chat-text"></i>
+    </a>
     <a class="social-pill whatsapp fs-1 text-white position-relative" href="https://api.whatsapp.com/send/?phone=%2B918888849176&text&type=phone_number&app_absent=0" target="_blank" style="cursor: pointer;">
       <i class="ph-fill ph-whatsapp-logo"></i>
       <div class="tooltiptext">How can we help?</div>
@@ -179,7 +182,7 @@
                 Evolution of Smart Construction
               </h1>
               <p class="lead hero-desc text-black" style="padding: 0 212px;">
-                URVISA isn’t just about construction - it’s about redefining how it’s done. By integrating advanced technologies like <span style="font-weight: 600;">Building Information Modeling (BIM) and Cost & Contract Management,</span> we streamline every phase, making projects smarter, faster, and more efficient.
+                URVISA isn’t just about construction - it’s about redefining how it’s done. By integrating advanced technologies like <span style="font-weight: 800;">Building Information Modeling (BIM) and Cost & Contract Management,</span> we streamline every phase, making projects smarter, faster, and more efficient.
               </p>
               <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
@@ -199,7 +202,7 @@
                 The Best <span style="font-weight: 800;">Tech Solutions</span> <br> <span style="font-weight: 800;">Consultancy</span> in Construction
               </h1>
               <p class="lead hero-desc" style="padding: 0 212px;">
-                URVISA leads the construction tech revolution, setting industry standards with innovative solutions in <span style="font-weight: 600;">Rebar, Steel & Precast Detailing and Design – Architecture, Structural, MEPF,</span> ensuring each project is engineered for excellence.
+                URVISA leads the construction tech revolution, setting industry standards with innovative solutions in <span style="font-weight: 800;">Rebar, Steel & Precast Detailing and Design – Architecture, Structural, MEPF,</span> ensuring each project is engineered for excellence.
               </p>
               <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
@@ -218,7 +221,7 @@
                 Redefining the Boundaries of <br> What’s Possible in Construction
               </h1>
               <p class="lead hero-desc text-black" style="padding: 0 212px;">
-                Leveraging next-gen technologies such as <span style="font-weight: 600;">3D Mapping, Building and Industrial Audits, and Design & Execution Management,</span> we set new benchmarks in the construction industry by delivering optimized, scalable, and sustainable solutions.
+                Leveraging next-gen technologies such as <span style="font-weight: 800;">3D Mapping, Building and Industrial Audits, and Design & Execution Management,</span> we set new benchmarks in the construction industry by delivering optimized, scalable, and sustainable solutions.
               </p>
               <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
@@ -237,7 +240,7 @@
                 From Concept to Completion,<br> We’re With You Every Step of the Way
               </h1>
               <p class="lead hero-desc" style="padding: 0 212px;">
-                Our end-to-end tech consultancy guides every aspect of your construction journey—from <span style="font-weight: 600;">Training and Coaching to harnessing the power of Artificial Intelligence</span>—ensuring integrated, tech-powered strategies tailored to your unique needs.
+                Our end-to-end tech consultancy guides every aspect of your construction journey—from <span style="font-weight: 800;">Training and Coaching to harnessing the power of Artificial Intelligence</span>—ensuring integrated, tech-powered strategies tailored to your unique needs.
               </p>
               <a href="" class="ylw-btn mob-btn">Know more <i class="ph ph-caret-right"></i></a>
             </div>
@@ -663,9 +666,9 @@ logos.forEach((logo, index) => {
             <img src="assets/images/hat.svg" alt="" class="hat-icon" />
             <span class="lead hat-desc p-0">Customized Consultancy</span>
           </div>
-          <button class="ylw-btn mt-3 subcomponent" data-animate="zoomIn">
+          <a class="ylw-btn mt-3 subcomponent" data-animate="zoomIn" href="aboutus.html">
             EXPLORE OUR COMPANY <i class="ph-bold ph-arrow-up-right"></i>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -1121,7 +1124,7 @@ designed to endure for the long haul.
                   <div class="service-card_content">
                     <div class="d-flex align-items-center service-card-title">
                       <div class="service-card_icon">
-                        <img src="assets/images/bmi.svg" alt="img">
+                        <img src="assets/images/icons/i10.svg" alt="img">
                       </div>
                       <h4 class="service-card_title"><a href="">Artificial Intelligence (AI)</a></h4>
                     </div>
@@ -1168,33 +1171,50 @@ designed to endure for the long haul.
           </div>
         </div>
       </div>
+      <div class="col-md-12 d-flex" style="align-items: center;justify-content: center;">
+        <hr class="custom-slider-line" style="width: 30%;">
+        <div class="swiper-number-pagination" style="    width: auto;
+        margin: 10px 50px;
+        font-weight: 600;
+        font-size: x-large;
+        color: var(--theme-color);"></div>
+        <hr class="custom-slider-line" style="width: 30%;">
+      </div>
       <!-- Swiper JS -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <!-- Initialize Swiper -->
       <script>
         var swiper = new Swiper(".mySwiper", {
-          // Base settings for mobile
-          slidesPerView: 1,
-          spaceBetween: 10,
-          mousewheel: true,
-          breakpoints: {
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20
-            },
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
-          }
-        });
+  // Base settings for mobile
+  slidesPerView: 1,
+  slidesPerGroup: 1, // Scroll 1 slide at a time on mobile
+  spaceBetween: 10,
+  mousewheel: true,
+  pagination: {
+    el: '.swiper-number-pagination',
+    type: 'fraction',
+  },
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3, // Scroll 3 slides at a time on desktop
+      spaceBetween: 30
+    }
+  }
+});
       </script>
       
       
@@ -1585,7 +1605,7 @@ Innovating Every Project
                   <div class="portfolio-card-details">
                     <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial</span>
                     <h4 class="portfolio-card-title">
-                      <a href="project-details.html">Dassault Systemes, Pune</a>
+                      <a href="ourprojects.html">Dassault Systemes, Pune</a>
                     </h4>
                     <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.5 million sq.ft.</p>
                     <p class="portofolio-card-text"><b>Service:</b> BIM, 3D Mapping, Scan to BIM</p>
@@ -1600,7 +1620,7 @@ Innovating Every Project
                   <div class="portfolio-card-details">
                     <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pune / Commercial (Falcon)</span>
                     <h4 class="portfolio-card-title">
-                      <a href="project-details.html">Malpani Group</a>
+                      <a href="ourprojects.html">Malpani Group</a>
                     </h4>
                     <p class="portofolio-card-text mb-1"><b>BUA:</b> 0.4 million sq.ft.</p>
                     <p class="portofolio-card-text"><b>Service:</b> BIM, CM</p>
@@ -1616,7 +1636,7 @@ Innovating Every Project
                   <div class="portfolio-card-details">
                     <span class="portfolio-card-subtitle"><i class="ph-fill ph-map-pin-line"></i> Pan India / Commercial</span>
                     <h4 class="portfolio-card-title">
-                      <a href="project-details.html">Wipro Ltd.</a>
+                      <a href="ourprojects.html">Wipro Ltd.</a>
                     </h4>
                     <p class="portofolio-card-text mb-1"><b>BUA:</b> 2 billion sq.ft.</p>
                     <p class="portofolio-card-text"><b>Service:</b> 3D Mapping, Digitalization</p>
@@ -1725,21 +1745,21 @@ Innovating Every Project
   
         <form id="contactForm" class="col-md-6 p-0">
           <!-- First Row: First Name and Last Name -->
-          <div class="row mb-3">
-            <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6 mb-3">
               <input class="contact-us-input form-control" type="text" id="firstName" placeholder="First Name" required>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <input class="contact-us-input form-control" type="text" id="lastName" placeholder="Last Name" required>
             </div>
           </div>
   
           <!-- Second Row: Phone and Email -->
-          <div class="row mb-3">
-            <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6 mb-3">
               <input class="contact-us-input form-control" type="number" id="phone" placeholder="Phone Number" required>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <input class="contact-us-input form-control" type="email" id="email" placeholder="Email" required>
             </div>
           </div>
@@ -1874,7 +1894,8 @@ function closePopup() {
                 <img src="assets/images/logo.svg" alt="" class="img-fluid" />
               </a>
               <p>
-                Drop us a line about your project or describe a challenge your company needs help solving. We’d love to discuss how URVISA can work with you. Please get in touch via email at connect@urvisatech.com or using the form above.  
+                Drop us a line about your project or describe a challenge your company needs help solving. We’d love to discuss how <b>URVISA can assist you in your ongoing and upcoming projects.</b>
+Please get in touch via email at contact@urvisatech.com or using the form above.
               </p>
               <p>Monday-Friday: 09.30am-06.30pm.</p>
             </div>
@@ -1896,8 +1917,8 @@ function closePopup() {
                 </a>
               </li>
               <li class="touch" style="padding-top: 0;">
-                <a href="mailto:connect@urvisatech.com" target="_blank"><i class="bi bi-envelope" style="color: transparent !important;"></i>
-                  &nbsp;connect@urvisatech.com
+                <a href="mailto:contact@urvisatech.com" target="_blank"><i class="bi bi-envelope" style="color: transparent !important;"></i>
+                  &nbsp;contact@urvisatech.com
                 </a>
               </li>
               <li class="touch">
@@ -1909,20 +1930,20 @@ function closePopup() {
             <ul>
               <h3>Useful Links</h3>
               <li>
-                <a href="#">About Us</a>
+                <a href="aboutus.html">About Us</a>
               </li>
               <li>
-                <a href="/contact-us.html" id="footerSolutionLink">Contact Us</a>
+                <a href="contact-us.html" id="footerSolutionLink">Contact Us</a>
               </li>
               <li>
-                <a href="" id="">What We Do</a>
+                <a href="ourprojects.html" id="">What We Do</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="" id="">Our Team</a>
-              </li>
+              </li> -->
             </ul>
           </div>
-          <div class="col-lg-2 col-md-6 footer-links new-footer">
+          <!-- <div class="col-lg-2 col-md-6 footer-links new-footer">
             <ul>
               <h3 style="color: transparent !important;">Company</h3>
               <li>
@@ -1940,7 +1961,7 @@ function closePopup() {
               
               
             </ul>
-          </div>
+          </div> -->
           <div class="col-lg-2 col-md-6 footer-links">
             <ul>
               <h3>You can find us at</h3>
@@ -1948,14 +1969,17 @@ function closePopup() {
                 <a href="https://www.facebook.com/p/Urvisatech-Solutions-Pvt-Ltd-100070894418991/" target="_blank" class="twitter">
                   <i class="bi bi-facebook"></i>
                 </a>
-                <a href="<%= Instagram %>" target="_blank" class="linkedin">
+                <a href="https://www.instagram.com/urvisatechsolutions/" target="_blank" class="linkedin">
                   <i class="bi bi-instagram"></i>
                 </a>
-                <a href="<%= Twitter %>" target="_blank" class="linkedin">
+                <a href="https://x.com/UrvisatechS" target="_blank" class="linkedin">
                   <i class="bi bi-twitter-x"></i>
                 </a>
                 <a href="https://www.linkedin.com/company/urvisatech-solutions-pvt-ltd" target="_blank" class="linkedin">
                   <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC7L_zKNC4SsPjQIbLYh_ZfA" target="_blank" class="linkedin">
+                  <i class="bi bi-youtube"></i>
                 </a>
               </div>
             </ul>
@@ -1969,7 +1993,7 @@ function closePopup() {
         <div class="row">
           <div class="col-md-5">
             <p style="margin-top: 1rem;">
-              Copyright © URVISA 2024 All Rights Reserved.
+              Copyright © URVISA 2025 All Rights Reserved.
             </p>
             
           </div>
