@@ -148,7 +148,7 @@ body{
 .cursor-dot {
   width: 20px;
   height: 20px;
-  background: url('/urvisa/favicon.ico');
+  background: url('/favicon.ico');
   background-size: cover;
   transition: width 0.2s ease, height 0.2s ease;
 }
@@ -253,13 +253,13 @@ body{
     bottom: 30px;
     .dot {
       width: 30px;
-      height: 4px;
+      height: 8px;
       opacity: 1;
       background: #e6951587;
       border: 0 solid white;
       border-radius: 0;
       &.is-selected {
-        height: 5px;
+        height: 8px;
         background: var(--theme-color) !important;
         border: 0.5px solid #000;
       }
@@ -1474,8 +1474,9 @@ li.touch p{
   position: fixed;
   bottom: 0px;
   right: 20px;
-  flex-direction: column;
+  flex-direction: row;
   z-index: 998;
+  gap: 10px;
 }
 a.social-pill{
   width: 60px;
@@ -1867,20 +1868,20 @@ a.social-pill img{
 /* Contact form inputs */
 .contact-us-input {
   height: 50px;
-  background: #404040e7;
+  background: #ffffffe7;
   border: none;
   font-size: 14px;
-  color: #fff;
+  color: #000000;
   width: 100%;
   padding: 0 10px;
   transition: border-color 0.3s;
 }
 .form-control:focus{
-  background: #404040e7;
-  color: #fff;
+  background: #ffffffe7;
+  color: #000000;
 }
 .contact-us-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 .contact-us-input:focus-visible {
   outline: none;
@@ -1890,7 +1891,7 @@ a.social-pill img{
 /* Textarea styling */
 .contact-us-textarea {
   padding-top: 14px;
-  background: #404040e7;
+  background: #ffffffe7;
   border: none;
   color: #fff;
   font-size: 14px;
@@ -1900,7 +1901,7 @@ a.social-pill img{
   transition: border-color 0.3s;
 }
 .contact-us-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 .contact-us-textarea:focus-visible {
   outline: none;
@@ -2447,7 +2448,7 @@ p.card-text.service-text {
 .cursor-dot {
   width: 20px;
   height: 20px;
-  background: url('/urvisa/favicon.ico');
+  background: url('/favicon.ico');
   background-size: cover;
   transition: width 0.2s ease, height 0.2s ease;
 }
@@ -2491,6 +2492,24 @@ p.card-text.service-text {
   justify-content: space-between;
   border-radius: 0;
 }
+/* Hover state for the nav-link */
+.why-tab-wrap .nav-item .nav-link:hover {
+  color: var(--theme-color);
+}
+
+/* Add transition to the arrow for smooth rotation */
+.why-tab-wrap .nav-item .nav-link .ph-arrow-up-right {
+  transition: transform 0.3s ease; /* Smooth transition for 0.3 seconds */
+}
+.why-tab-wrap .nav-item .nav-link.active:hover .ph-arrow-up-right {
+  transform: none;
+  transition: none;
+}
+/* Rotate the arrow 45 degrees on hover */
+.why-tab-wrap .nav-item .nav-link:hover .ph-arrow-up-right {
+  transform: rotate(90deg);
+}
+
 .why-tab-wrap .nav-item .nav-link i {
   font-size: 24px;
 }
@@ -2997,4 +3016,11 @@ p.card-text.service-text {
 }
 .flickity-button-icon .arrow {
   fill: #E69515 !important;
+}
+.custom-slider-line{
+  margin: 1rem 0;
+  color: inherit;
+  border: 3px solid var(--theme-color);
+  border-top: 0;
+  opacity: .25;
 }
