@@ -786,41 +786,41 @@
           
       </div>
   
-        <form id="contactForm" class="col-md-6 p-0">
-          <!-- First Row: First Name and Last Name -->
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <input class="contact-us-input form-control" type="text" id="firstName" placeholder="First Name" required>
-            </div>
-            <div class="col-md-6">
-              <input class="contact-us-input form-control" type="text" id="lastName" placeholder="Last Name" required>
-            </div>
+      <form id="contactForm" class="col-md-6 p-0">
+        <!-- First Row: First Name and Last Name -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="text" id="firstName" placeholder="First Name" required>
           </div>
-  
-          <!-- Second Row: Phone and Email -->
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <input class="contact-us-input form-control" type="number" id="phone" placeholder="Phone Number" required>
-            </div>
-            <div class="col-md-6">
-              <input class="contact-us-input form-control" type="email" id="email" placeholder="Email" required>
-            </div>
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="text" id="lastName" placeholder="Last Name" required>
           </div>
-  
-          <!-- Third Row: Message -->
-          <div class="row mb-3">
-            <div class="col">
-              <textarea class="contact-us-textarea form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-            </div>
+        </div>
+
+        <!-- Second Row: Phone and Email -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="number" id="phone" placeholder="Phone Number" required>
           </div>
-  
-          <!-- Submit Button Row -->
-          <div class="row">
-            <div class="col-md-6">
-              <button type="submit" class="ylw-btn btn w-100">Send Message <i class="ph-bold ph-arrow-up-right"></i></button>
-            </div>
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="email" id="email" placeholder="Email" required>
           </div>
-        </form>
+        </div>
+
+        <!-- Third Row: Message -->
+        <div class="row mb-3">
+          <div class="col">
+            <textarea class="contact-us-textarea form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button Row -->
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="ylw-btn btn w-100">Send Message <i class="ph-bold ph-arrow-up-right"></i></button>
+          </div>
+        </div>
+      </form>
   
         <script>
           document.getElementById('contactForm').addEventListener('submit', async function(event) {
