@@ -152,6 +152,33 @@ body{
   background-size: cover;
   transition: width 0.2s ease, height 0.2s ease;
 }
+#infographic::before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: url('/u-log.svg');
+  background-size: cover;
+}
+.rotating-logo {
+  top: 49.5%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* adjust size as needed */
+  height: 150px;
+  animation: rotate 11s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 .cursor-outline {
   width: 40px;
   height: 40px;
@@ -1931,6 +1958,21 @@ input[type="number"]::-webkit-inner-spin-button,
       display: none;
     }
   }
+
+  .mob-sec{
+    display: none;
+  }
+  .web-sec{
+    display: block;
+  }
+  @media (max-width: 1199px){
+    .mob-sec{
+      display: flex;
+    }
+    .web-sec{
+      display: none;
+    }
+  }
   .logo-row {
     display: flex;
     flex-direction: row;
@@ -3023,4 +3065,29 @@ p.card-text.service-text {
   border: 3px solid var(--theme-color);
   border-top: 0;
   opacity: .25;
+}
+span.swiper-pagination-bullet{
+  width: 15px;
+  height: 15px;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background: #000;
+}
+#my-arrow-custom{
+  position: relative;
+}
+.my-arrows{
+  position: absolute;
+  font-size: 40px;
+}
+.swiper-button-next-1.my-arrows{
+  right: 2%;
+  bottom: 40%;
+}
+.swiper-button-prev-1.my-arrows{
+  left: 2%;
+  bottom: 40%;
+}
+.download-message{
+  display: none;
 }
