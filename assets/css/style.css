@@ -3091,3 +3091,42 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active{
 .download-message{
   display: none;
 }
+/* Show dropdown on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Aligns dropdown with nav link */
+}
+
+/* Ensure dropdown link remains clickable */
+.navbar-nav .dropdown-toggle {
+  pointer-events: auto;
+}
+
+/* Optional: Smooth transition for dropdown */
+.dropdown-menu {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+}
+
+/* Prevent dropdown from closing when clicking the main link */
+.dropdown-toggle::after {
+  display: none; /* Remove Bootstrap's default caret */
+}
+.my-sss li a{
+  white-space: nowrap;
+  padding-top: 10px;
+  padding-right: 10px;
+  color: #000;
+  &:hover{
+    color: var(--theme-color);
+  }
+}
+
