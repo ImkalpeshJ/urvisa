@@ -149,7 +149,7 @@
     </div>
 
     <!-- Section 1 -->
-    <div class="space text-center overflow-hidden shape-mockup-wrap">
+    <div class="space text-center overflow-hidden shape-mockup-wrap" id="section-one">
 
         <div class="container">
             <div class="row">
@@ -303,7 +303,7 @@
             </div> -->
         </div>
     </div>
-    <div class="space text-center overflow-hidden shape-mockup-wrap" style="background-image: url('assets/images/what-we-do.png');">
+    <div class="space text-center overflow-hidden shape-mockup-wrap" style="background-image: url('assets/images/what-we-do.png');" id="section-two">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -952,7 +952,8 @@
                                         </div>
                                         <p class="tab-desc mb-3">
                                             1 to 3 months
-                                        </p>                                 
+                                        </p>      
+                                        <a href="#contact-us" class="ylw-btn">Contact us to know more</a>                           
                                     </div>
                                 </div>
                               </div>
@@ -1661,7 +1662,8 @@ Blander, Revit, SOLIDWORK Siemens UX
                                     </div>
                                     <p class="tab-desc mb-3">
                                         1 to 3 months
-                                    </p>                                 
+                                    </p>      
+                                    <a href="#contact-us" class="ylw-btn">Contact us to know more</a>                             
                                 </div>
                             </div>
                         </div>
@@ -1759,7 +1761,7 @@ Water resource management: AI can optimize the distribution and use of water res
     </div>
 
     <!-- Section 3 -->
-    <div class="service-area-1 space overflow-hidden background-image" id="service-sec" style="background-image: url(&quot;assets/img/bg/service-bg1-1.png&quot;);">
+    <div class="service-area-1 space overflow-hidden background-image" id="service-sec" style="background-image: url(&quot;assets/img/bg/service-bg1-1.png&quot;);"  >
         <div class="container">
             <div class="row gy-30 gx-30">
                 <div class="col-xl-4 col-md-6">
@@ -2245,7 +2247,33 @@ document.querySelectorAll('.nav-link').forEach(function (tab) {
     });
     
       </script>
-
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Get the hash from the URL (e.g., "2s" from "#2s")
+    const hash = window.location.hash.substring(1);
+    
+    if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+            // Scroll smoothly to the element
+            element.scrollIntoView({ behavior: 'smooth' });
+            
+            // Focus on the element if it's focusable (e.g., button, link, input)
+            if (element.focus) {
+                element.focus();
+            }
+            
+            // Add a temporary highlight
+            element.classList.add('highlight');
+            
+            // Remove the highlight after 2 seconds
+            setTimeout(() => {
+                element.classList.remove('highlight');
+            }, 2000);
+        }
+    }
+});
+</script>
 </body>
 
 </html>
