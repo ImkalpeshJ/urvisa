@@ -294,7 +294,7 @@
     }
     .marquee-item img {
       object-fit: contain;
-      height: 80px;
+      height: 120px;
       width: 140px;
       margin-right: 30px;
       margin-left: 30px;
@@ -338,8 +338,11 @@
                 <span class="image-number">3</span>
               </div>
               <div class="marquee-item">
-                <img src="assets/images/slider-logo/1678971131484 1.svg" alt="Logo">
+                <img src="assets/images/slider-logo/architude.png" alt="Logo">
                 <span class="image-number">1</span>
+              </div>
+              <div class="marquee-item">
+                <img style="height: 90px;" src="assets/images/slider-logo/1678971131484 1.svg" alt="Logo">
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/ACS-Hi-Res-Logo 1.svg" alt="Logo">
@@ -357,10 +360,10 @@
                 <img src="assets/images/slider-logo/footer-logo 1.svg" alt="Logo">
                 <span class="image-number">2</span>
               </div>
-              <div class="marquee-item">
+              <!-- <div class="marquee-item">
                 <img src="assets/images/slider-logo/Forum-Estate-Project-Logo-2 1.svg" alt="Logo">
                 <span class="image-number">8</span>
-              </div>
+              </div> -->
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/Frame 1410077233.svg" alt="Logo">
                 <span class="image-number">14</span>
@@ -387,7 +390,7 @@
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/hyatt-hotels-corporation9011 1.svg" alt="Logo">
-                <span class="image-number">3</span>
+                <span class="image-number">1</span>
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/image 22.svg" alt="Logo">
@@ -415,15 +418,19 @@
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/images 2.svg" alt="Logo">
-                <span class="image-number">1</span>
+                <span class="image-number">4</span>
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/K_Raheja_Corp 1.svg" alt="Logo">
-                <span class="image-number">6</span>
+                <span class="image-number">5</span>
               </div>
               <div class="marquee-item">
-                <img src="assets/images/slider-logo/logo (1) 1.svg" alt="Logo">
+                <img src="assets/images/slider-logo/ostraca.png" alt="Logo">
                 <span class="image-number">2</span>
+              </div>
+              <div class="marquee-item d-flex justify-content-center">
+                <img style="    height: 110px;
+    width: 70px;" src="assets/images/slider-logo/logo (1) 1.svg" alt="Logo">
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/logo (1) 2.svg" alt="Logo">
@@ -443,7 +450,7 @@
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/Logo 17.svg" alt="Logo">
-                <span class="image-number">2</span>
+                <span class="image-number">1</span>
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/Logo 36.svg" alt="Logo">
@@ -457,13 +464,10 @@
                 <img src="assets/images/slider-logo/logo-svg 1.svg" alt="Logo">
                 <span class="image-number">2</span>
               </div>
+              
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/logo-with-tag-line 1.svg" alt="Logo">
                 <span class="image-number">1</span>
-              </div>
-              <div class="marquee-item">
-                <img src="assets/images/slider-logo/Mastercard-logo.svg 1.svg" alt="Logo">
-                <span class="image-number">4</span>
               </div>
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/mecpl 1.svg" alt="Logo">
@@ -492,6 +496,10 @@
               <div class="marquee-item">
                 <img src="assets/images/slider-logo/edifice.png" alt="Logo">
                 <span class="image-number">4</span>
+              </div>
+              <div class="marquee-item">
+                <img style="    height: 110px;
+    width: 80px;" src="assets/images/slider-logo/Mastercard-logo.svg 1.svg" alt="Logo">
               </div>
             </div>
           </div>          
@@ -678,7 +686,10 @@ logos.forEach((logo, index) => {
   <div class="space" style="    background-image: url(assets/images/section-5.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;">
+  background-position: right;" id="my-arrow-custom">
+
+<div class="swiper-button-prev-1 my-arrows"><i class="ph-bold ph-caret-left"></i></div>
+<div class="swiper-button-next-1 my-arrows"><i class="ph-bold ph-caret-right"></i></div>
     <div class="container">
       <div class="col-md-12">
         <div class="row">
@@ -1171,6 +1182,7 @@ designed to endure for the long haul.
           </div>
         </div>
       </div>
+
       <div class="col-md-12 d-flex" style="align-items: center;justify-content: center;">
         <hr class="custom-slider-line" style="width: 30%;">
         <div class="swiper-number-pagination" style="    width: auto;
@@ -1179,6 +1191,9 @@ designed to endure for the long haul.
         font-size: x-large;
         color: var(--theme-color);"></div>
         <hr class="custom-slider-line" style="width: 30%;">
+      </div>
+      <div class="col-md-12 d-flex" style="align-items: center;justify-content: center;">
+        <a class="ylw-btn btn w-lg-25" href="/ourservices.html">explore our services <i class="ph-bold ph-arrow-up-right"></i></a>
       </div>
       <!-- Swiper JS -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1191,24 +1206,42 @@ designed to endure for the long haul.
   spaceBetween: 10,
   mousewheel: true,
   pagination: {
-    el: '.swiper-number-pagination',
-    type: 'fraction',
+      el: '.swiper-number-pagination',
+      clickable: true,
+      type: 'fraction' // default for mobile
+    },
+  navigation: {
+    nextEl: '.swiper-button-next-1',
+    prevEl: '.swiper-button-prev-1',
   },
   breakpoints: {
     // when window width is >= 640px
     640: {
+      pagination: {
+          el: '.swiper-number-pagination',
+          type: 'fraction'
+        },
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 20
     },
     // when window width is >= 768px
     768: {
+      pagination: {
+          el: '.swiper-number-pagination',
+          type: 'fraction'
+        },
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 30
     },
     // when window width is >= 1024px
     1024: {
+      pagination: {
+          el: '.swiper-number-pagination',
+          type: 'bullets',
+          clickable: true
+        },
       slidesPerView: 3,
       slidesPerGroup: 3, // Scroll 3 slides at a time on desktop
       spaceBetween: 30
@@ -1270,7 +1303,7 @@ designed to endure for the long haul.
     </div>
 </div>
 <!-- Section 6 -->
-<div class="space-top text-center overflow-hidden shape-mockup-wrap" style="    background-image: url('assets/images/section-man.png');
+<div class="space text-center overflow-hidden shape-mockup-wrap" style="    background-image: url('assets/images/section-man.png');
 background-size: contain;
 background-position: top;
 background-repeat: no-repeat;">
@@ -1286,12 +1319,12 @@ background-repeat: no-repeat;">
 Innovating Every Project
       </h1>
     </div>
-      <div class="row gy-50 align-items-center">
+      <div class="row gy-50 align-items-center mob-sec">
           <div class="col-xl-4 col-md-6">
               <div class="wcu-card-wrap left-align">
                   <div class="wcu-card">
                       <div class="wcu-card-icon">
-                          <img src="assets/images/hat.svg" alt="img">
+                          <img src="assets/images/hat-1.svg" alt="img">
                       </div>
                       <div class="wcu-card-details">
                           <h4 class="wcu-card-title">Integrated Townships</h4>
@@ -1301,7 +1334,7 @@ Innovating Every Project
                   </div>
                   <div class="wcu-card">
                       <div class="wcu-card-icon">
-                        <img src="assets/images/hat.svg" alt="img">
+                        <img src="assets/images/hat-2.svg" alt="img">
                       </div>
                       <div class="wcu-card-details">
                           <h4 class="wcu-card-title">Office Interiors</h4>
@@ -1310,7 +1343,7 @@ Innovating Every Project
                   </div>
                   <div class="wcu-card">
                       <div class="wcu-card-icon">
-                        <img src="assets/images/hat.svg" alt="img">
+                        <img src="assets/images/hat-3.svg" alt="img">
                       </div>
                       <div class="wcu-card-details">
                           <h4 class="wcu-card-title">Healthcare</h4>
@@ -1319,7 +1352,7 @@ Innovating Every Project
                   </div>
                   <div class="wcu-card mb-5">
                     <div class="wcu-card-icon">
-                      <img src="assets/images/hat.svg" alt="img">
+                      <img src="assets/images/hat-4.svg" alt="img">
                     </div>
                     <div class="wcu-card-details">
                         <h4 class="wcu-card-title">Theme Parks</h4>
@@ -1334,7 +1367,7 @@ Innovating Every Project
               <div class="wcu-card-wrap right-align">
                   <div class="wcu-card">
                       <div class="wcu-card-icon">
-                        <img src="assets/images/hat.svg" alt="img">
+                        <img src="assets/images/hat-5.svg" alt="img">
                       </div>
                       <div class="wcu-card-details">
                           <h4 class="wcu-card-title">Gated Residential Communities</h4>
@@ -1343,7 +1376,7 @@ Innovating Every Project
                   </div>
                   <div class="wcu-card">
                       <div class="wcu-card-icon">
-                        <img src="assets/images/hat.svg" alt="img">
+                        <img src="assets/images/hat-6.svg" alt="img">
                       </div>
                       <div class="wcu-card-details">
                           <h4 class="wcu-card-title">Industrial & Warehouse</h4>
@@ -1352,7 +1385,7 @@ Innovating Every Project
                   </div>
                   <div class="wcu-card">
                       <div class="wcu-card-icon">
-                        <img src="assets/images/hat.svg" alt="img">
+                        <img src="assets/images/hat-7.svg" alt="img">
                       </div>
                       <div class="wcu-card-details">
                           <h4 class="wcu-card-title">Commercial Schemes</h4>
@@ -1362,7 +1395,7 @@ Innovating Every Project
                   </div>
                   <div class="wcu-card">
                     <div class="wcu-card-icon">
-                      <img src="assets/images/hat.svg" alt="img">
+                      <img src="assets/images/hat-8.svg" alt="img">
                     </div>
                     <div class="wcu-card-details">
                         <h4 class="wcu-card-title">Retail Malls</h4>
@@ -1372,12 +1405,14 @@ Innovating Every Project
                   </div>
               </div>
           </div>
-          <div class="col-xl-4">
-              <div class="wcu-thumb1-1">
-                  <img src="assets/images/man.png" alt="img">
-              </div>
-          </div>
           
+      </div>
+      <div class="row gy-50 align-items-center web-sec">
+        <div class="position-relative d-inline-block">
+          <img src="assets/images/Infographic-an.svg" alt="" class="img-fluid">
+          <img src="assets/images/u-log.svg" class="position-absolute rotating-logo" alt="">
+        </div>
+        
       </div>
   </div>
 </div>
@@ -1741,7 +1776,7 @@ Innovating Every Project
               <img src="assets/images/bullets.svg" alt="">
               <span>CONTACT US</span>
           </p>
-          <h1 class="display-4 section-1-head subcomponent animated text-white text-lg-start" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;">Be A Part Of Our Growth Journey</h1>
+          <h1 class="display-4 section-1-head subcomponent animated text-white text-lg-start" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;"><i>be a part of <br>growth journey...</i></h1> 
           <p class="lead section-desc subcomponent animated text-white text-lg-start" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;">Reach out today to start a journey of visionary architecture and unparalleled craftsmanship.</p>
           
           
@@ -1750,84 +1785,72 @@ Innovating Every Project
           
       </div>
   
-        <form id="contactForm" class="col-md-6 p-0">
-          <!-- First Row: First Name and Last Name -->
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <input class="contact-us-input form-control" type="text" id="firstName" placeholder="First Name" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input class="contact-us-input form-control" type="text" id="lastName" placeholder="Last Name" required>
-            </div>
+      <form id="contactForm" class="col-md-6 p-0">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="text" id="firstName" name="first_name" placeholder="First Name*" required>
           </div>
-  
-          <!-- Second Row: Phone and Email -->
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <input class="contact-us-input form-control" type="number" id="phone" placeholder="Phone Number" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input class="contact-us-input form-control" type="email" id="email" placeholder="Email" required>
-            </div>
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="text" id="lastName" name="last_name" placeholder="Last Name*" required>
           </div>
-  
-          <!-- Third Row: Message -->
-          <div class="row mb-3">
-            <div class="col">
-              <textarea class="contact-us-textarea form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-            </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="number" id="phone" name="phone" placeholder="Phone Number*" required>
           </div>
-  
-          <!-- Submit Button Row -->
-          <div class="row">
-            <div class="col-md-6">
-              <button type="submit" class="ylw-btn btn w-100">Send Message <i class="ph-bold ph-arrow-up-right"></i></button>
-            </div>
+          <div class="col-md-6 mb-3">
+            <input class="contact-us-input form-control" type="email" id="email" name="from_email" placeholder="Email*" required>
           </div>
-        </form>
+        </div>
+      
+        <div class="row mb-3">
+          <div class="col">
+            <textarea class="contact-us-textarea form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+        </div>
+      
+        <!-- Hidden field for full name (EmailJS uses this) -->
+        <input type="hidden" name="from_name" id="from_name">
+      
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="ylw-btn btn w-100">Send Message <i class="ph-bold ph-arrow-up-right"></i></button>
+          </div>
+        </div>
+      </form>
+      
   
-        <script>
-          document.getElementById('contactForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-  
-            // Get the first and last name values and combine them
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const fullName = firstName + ' ' + lastName;
-  
-            // Prepare form data with the combined name
-            const formData = {
-              name: fullName,
-              phone: document.getElementById('phone').value,
-              email: document.getElementById('email').value,
-              message: document.getElementById('message').value
-            };
-  
-            try {
-              const response = await fetch('https://contact-email-5y52.onrender.com/contact', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-              });
-  
-              if (response.ok) {
-                // Show success modal
-                const myModal = new bootstrap.Modal(document.getElementById('responseModal'));
-                myModal.show();
-  
-                // Reset form
-                document.getElementById('contactForm').reset();
-              } else {
-                throw new Error('Server responded with status: ' + response.status);
-              }
-            } catch (error) {
-              console.error('Error:', error);
-              alert('Oops! Something went wrong. Please try again.');
-            }
-          });
-        </script>
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>
+        (function(){
+          emailjs.init("w0apSXmw2n4_NXzpb"); // Your public key
+        })();
+      </script>
+      <!-- Form Submission Script -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = this;
+    const firstName = form.querySelector('[name="first_name"]').value;
+    const lastName = form.querySelector('[name="last_name"]').value;
+    form.querySelector('[name="from_name"]').value = firstName + ' ' + lastName;
+
+    emailjs.sendForm('service_zhphdv6', 'template_6x2jsg6', form)
+      .then(function(response) {
+        const modalEl = document.getElementById('responseModal');
+        if (modalEl) {
+          const myModal = new bootstrap.Modal(modalEl);
+          myModal.show();
+        }
+        form.reset();
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert('Oops! Something went wrong. Please try again.');
+      });
+  });
+</script>
   
       </div>
     </div>
