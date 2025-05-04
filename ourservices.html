@@ -69,6 +69,13 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.001), 0 2px 7px rgba(0, 0, 0, 0.05);
         height: 100%;
     }
+    .heading-desc, .tab-desc{
+        opacity: 0.6;
+        &:hover{
+            opacity: 1;
+            font-weight: 500;
+        }
+    }
 </style>
 <body>
     <div class="cursor-dot" data-cursor-dot></div>
@@ -87,10 +94,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/ourservices.html" id="servicesDropdown" role="button" 
+                <a class="nav-link active dropdown-toggle" href="/ourservices.html" id="servicesDropdown" role="button" 
                    aria-expanded="false">
                   Services <i class="ph-bold ph-caret-down"></i>
                 </a>
@@ -98,15 +105,15 @@
                   <li><a class="dropdown-item" href="/ourservices.html#section-one">Our Services</a></li>
                   <li><a class="dropdown-item" href="/ourservices.html#section-two">What we do</a>
                     <ul class="my-sss">
-                      <li><a href="/ourservices.html?data=2s#1s">BIM</a></li>
-                      <li><a href="/ourservices.html?data=3s#1s">Cost and Contract Management</a></li>
-                      <li><a href="/ourservices.html?data=4s#1s">Rebar, Steel & Precast Detailing</a></li>
-                      <li><a href="/ourservices.html?data=5s#1s">Point Cloud: 3D Mapping</a></li>
-                      <li><a href="/ourservices.html?data=1s#1s">Building & Industrial Audits</a></li>
-                      <li><a href="/ourservices.html?data=6s#1s">Design Services</a></li>
-                      <li><a href="/ourservices.html?data=7s#1s">Design & Execution Management</a></li>
-                      <li><a href="/ourservices.html?data=8s#1s">Training/Coaching</a></li>
-                      <li><a href="/ourservices.html?data=9s#1s">AI</a></li>
+                      <li><a href="/ourservices.html?data=2s#section-two">BIM</a></li>
+                      <li><a href="/ourservices.html?data=3s#section-two">Cost and Contract Management</a></li>
+                      <li><a href="/ourservices.html?data=4s#section-two">Rebar, Steel & Precast Detailing</a></li>
+                      <li><a href="/ourservices.html?data=5s#section-two">Point Cloud: 3D Mapping</a></li>
+                      <li><a href="/ourservices.html?data=1s#section-two">Building & Industrial Audits</a></li>
+                      <li><a href="/ourservices.html?data=6s#section-two">Design Services</a></li>
+                      <li><a href="/ourservices.html?data=7s#section-two">Design & Execution Management</a></li>
+                      <li><a href="/ourservices.html?data=8s#section-two">Training/Coaching</a></li>
+                      <li><a href="/ourservices.html?data=9s#section-two">AI</a></li>
                     </ul>
                   </li>
                   <li><a class="dropdown-item" href="/ourservices.html#service-sec">How we work</a></li>
@@ -217,8 +224,9 @@
                 </div>
             </div>
             <div class="row gy-30 gx-30 mt-4">
-                <div class="col-md-12 d-flex" style="align-items: center;justify-content: center;">
+                <div class="col-md-12 d-flex flex-column" style="align-items: center;justify-content: center;">
                     <a class="ylw-btn btn w-lg-25" href="#contact-us" onclick="showDownloadMessage()">Download our company profile <i class="ph-bold ph-arrow-up-right"></i></a>
+                    <span class="text-muted mt-2" style="font-size: 10px;">Note: To download the brochure, kindly fill out the contact us form.</span>
                   </div>
             </div>
             <!-- <div class="space">
@@ -1903,7 +1911,7 @@ Water resource management: AI can optimize the distribution and use of water res
                     </p>
                     <h1 class="text-white text-start display-4 section-1-head subcomponent animated" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;">Let’s Get Started With
                         Your Next Project</h1>
-                        <p class="lead section-desc subcomponent animated text-lg-start download-message text-danger" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1;">Fill the form to download the brochure!</p>
+                        <p class="lead section-desc subcomponent animated text-lg-start download-message text-danger fs-4" data-animate="fadeInUp" style="transform: translateY(0px); opacity: 1; font-weight: 500;">Fill the form to download the brochure!</p>
                 </div>
     
                 <!-- Include EmailJS SDK -->
